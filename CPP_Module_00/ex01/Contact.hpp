@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/17 14:07:51 by yismaili          #+#    #+#             */
-/*   Updated: 2022/09/19 16:45:52 by yismaili         ###   ########.fr       */
+/*   Created: 2022/09/19 16:57:29 by yismaili          #+#    #+#             */
+/*   Updated: 2022/09/19 19:00:50 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef CONTACT_HPP
+# define CONTACT_HPP
 
 #include <iostream>
 #include <string>
 
-class PhoneBook
+class Contact
 {
 private:
-    string c_contacts;
+   std:: string FirstName;
+   std:: string LastName;
+   std:: string Nickname;
+   std:: string PhoneNumber;
 public:
-    PhoneBook(string contacts){
-       c_contacts = contacts; 
-    }
-    ~PhoneBook();
+    Contact(/* args */);
+    ~Contact();
 };
-
-PhoneBook::PhoneBook(string contacts)
-{
-  
-}
-
-PhoneBook::~PhoneBook()
-{
-}
+#endif
