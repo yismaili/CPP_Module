@@ -1,37 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Contact.hpp                                        :+:      :+:    :+:   */
+/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/19 16:57:29 by yismaili          #+#    #+#             */
-/*   Updated: 2022/09/20 17:16:04 by yismaili         ###   ########.fr       */
+/*   Created: 2022/09/20 15:51:55 by yismaili          #+#    #+#             */
+/*   Updated: 2022/09/20 18:05:57 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_HPP
-# define CONTACT_HPP
+#ifndef PHONE_BOOK_HPP
+# define PHONE_BOOK_HPP
 
-# include <iostream>
-# include <sstream>
+#include "Contact.hpp"
 
-class Contact
+class PhoneBook
 {
 private:
-	std::string	FirstName;
-	std::string	LastName;
-	std::string	NickName;
-	std::string	DarkestSecret;
-	std::string	PhoneNumber;
-	int			Index;
+	Contact	Contacts[8];
+	int		numberOfContect;
 public:
-	Contact();
-	~Contact();
-	int		addContact(int	nbr);
-	void	printRow(void);
-	void	printColumn(std::string str);
-	void	printContact(void);
+	PhoneBook();
+	~PhoneBook();
+	int		add();
+	void	search(int nbr);
+	void	display(int nbr);
 };
 
 #endif
