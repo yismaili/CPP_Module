@@ -6,31 +6,21 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 14:38:33 by yismaili          #+#    #+#             */
-/*   Updated: 2022/09/21 15:25:54 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/09/21 16:37:22 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string.h>
+#include "test.hpp"
 
-class test
-{
-public:
-    std::string name;
-    int         number;
-public:
-    test(std::string name_, int number_);
-    ~test();
-void printData(std::string name_, int number_){
+void test:: printData(std::string name_, int number_){
    std:: cout <<"my name is " << name_ << std:: endl;
    std:: cout << "my number is " << number_ << std:: endl; 
 }
-};
-
 test::test(std::string name_, int number_)
 {
     this->name = name_;
     this->number = number_;
+     std:: cout <<"I am her 22" << std:: endl;
 }
 test::~test()
 {
