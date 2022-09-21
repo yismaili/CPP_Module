@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 16:54:30 by yismaili          #+#    #+#             */
-/*   Updated: 2022/09/20 18:25:56 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/09/21 13:04:18 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ Contact::~Contact(void) {
 	return ;
 }
 
-int	Contact::addContact(int nbr) {
-	this->Index = nbr + 1;
+int	Contact::addContact(int index_) {
+	this->Index = index_ + 1;
 	std::cout << "Enter your first name: ";
 	getline(std::cin, this->FirstName);
 	std::cout << "Enter your last name: ";
