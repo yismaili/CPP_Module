@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 17:52:23 by yismaili          #+#    #+#             */
-/*   Updated: 2022/09/22 16:10:13 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/09/22 17:35:12 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ public:
     contact();
     ~contact();
     int     addContact(int index_);
-    void    printRow(void);
+    void    printDataRow(void);
     void    printColumnContact(std::string contacts);
     void    printContact(void);
 };

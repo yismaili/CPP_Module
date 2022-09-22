@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/17 11:53:17 by yismaili          #+#    #+#             */
-/*   Updated: 2022/09/17 12:11:24 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/09/22 17:38:18 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int main (int ac, char **av)
 {
     if (ac <= 1)
     {
-        cout << "No argumments" << std::endl;
+        cout << "LOUD AND UNBEARABLE FEEDBACK NOISE" << std::endl;
         return 0;
     }
     int i = 1, j;

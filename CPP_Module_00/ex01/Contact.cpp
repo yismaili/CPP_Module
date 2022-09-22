@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 17:51:56 by yismaili          #+#    #+#             */
-/*   Updated: 2022/09/22 16:46:16 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/09/22 17:34:58 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,16 +47,16 @@ int	contact::addContact(int index_)
 	return (1);
 }
 
-void contact:: printRow(void){
-  	std::cout << "|" << "         " << this->Index << "|";
+void contact:: printDataRow(void){
+  	std::cout << "|";
+    std::cout <<"      " << this->Index;
+    std::cout << "|";
     printColumnContact(contact::FirstName);
-    std::cout << "|";
+    std::cout << " | ";
     printColumnContact(contact::LastName);
-    std::cout << "|";
-    printColumnContact(contact::Nickname);
-    std::cout << "|";
-    printColumnContact(contact::DarkestSecret);
-    std::cout << "|" << std::endl;
+    std::cout << " | ";
+    printColumnContact(contact::PhoneNumber);
+    std::cout << " | " << std::endl;
 }
 
 void    contact::printColumnContact(std::string contacts) {

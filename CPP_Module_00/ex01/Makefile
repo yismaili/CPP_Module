@@ -6,12 +6,12 @@
 #    By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/22 14:05:35 by yismaili          #+#    #+#              #
-#    Updated: 2022/09/22 14:16:24 by yismaili         ###   ########.fr        #
+#    Updated: 2022/09/22 17:35:44 by yismaili         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = phonecontacts
-CC = g++
+CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 SRCS =   PhoneBook.cpp contact.cpp main.cpp 
 HDR = Contact.hpp PhoneBook.hpp

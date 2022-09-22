@@ -6,12 +6,12 @@
 #    By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/17 12:18:48 by yismaili          #+#    #+#              #
-#    Updated: 2022/09/17 12:26:24 by yismaili         ###   ########.fr        #
+#    Updated: 2022/09/22 17:37:41 by yismaili         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = megaphone
-CC = g++
+CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 SRCS =  megaphone.cpp
 

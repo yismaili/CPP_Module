@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 19:20:02 by yismaili          #+#    #+#             */
-/*   Updated: 2022/09/22 16:58:31 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/09/22 17:35:25 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,15 +42,15 @@ void PhoneBook::searsh(int number)
     int i;
     
     i = 0;
-    std::cout<< "--------------------------------------------------------------" << std:: endl;
-    std::cout<< "| Index | First Name | Last Nmae | Nickname | Darkest Secret |" << std:: endl;
-    std::cout<< "--------------------------------------------------------------" << std:: endl;
+    std::cout<< "--------------------------------------------------" << std:: endl;
+    std::cout<< "| Index | First Name | Last Nmae | Phone Number |" << std:: endl;
+    std::cout<< "--------------------------------------------------" << std:: endl;
     while (i < number)
     {
-        this->contacts_[i].printRow();
+        this->contacts_[i].printDataRow();
         i++;
     }
-    std::cout<< "--------------------------------------------------------------" << std:: endl;
+    std::cout<< "--------------------------------------------------" << std:: endl;
     this->display(number);
 }
 
