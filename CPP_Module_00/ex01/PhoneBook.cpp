@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 19:20:02 by yismaili          #+#    #+#             */
-/*   Updated: 2022/09/22 16:08:34 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/09/22 16:58:31 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ int PhoneBook::add(void)
     std::cout << "Adding a contact" << std::endl;
     if (this->numberOfContact < 8){
         nmbr = this->contacts_[this->numberOfContact].addContact(this->numberOfContact);
-        if (nmbr == 1){
+        if (nmbr == 0){
             std::cout << "contact can’t have empty fields" << std::endl;
-            return (1);
+            return (0);
         }
         this->numberOfContact++;
     }
@@ -60,9 +60,9 @@ void    PhoneBook::display(int number){
     std::stringstream ststm;
     
     num = 0;
+    std::cout <<"you want more info about your contact?" <<std::endl;
     getline(std::cin, str);
     ststm << str;
-    std::cout <<"you want more info about this contact?" <<std::endl;
     if (str.length() != 0)
     {
         int i = 0;

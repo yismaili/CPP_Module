@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 17:51:56 by yismaili          #+#    #+#             */
-/*   Updated: 2022/09/22 16:11:01 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/09/22 16:46:16 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int	contact::addContact(int index_)
 }
 
 void contact:: printRow(void){
-    std::cout << "|" << "  " << this->Index <<"|";
+  	std::cout << "|" << "         " << this->Index << "|";
     printColumnContact(contact::FirstName);
     std::cout << "|";
     printColumnContact(contact::LastName);
@@ -56,6 +56,7 @@ void contact:: printRow(void){
     printColumnContact(contact::Nickname);
     std::cout << "|";
     printColumnContact(contact::DarkestSecret);
+    std::cout << "|" << std::endl;
 }
 
 void    contact::printColumnContact(std::string contacts) {
