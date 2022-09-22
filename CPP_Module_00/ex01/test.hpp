@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 16:20:59 by yismaili          #+#    #+#             */
-/*   Updated: 2022/09/21 16:37:16 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/09/21 18:05:32 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,9 @@
 #define TEST_HPP
 #include <string.h>
 #include <iostream>
-
 class test
 {
-public:
+private:
     std::string name;
     int         number;
 public:
