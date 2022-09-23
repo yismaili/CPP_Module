@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 12:49:32 by yismaili          #+#    #+#             */
-/*   Updated: 2022/09/22 16:15:43 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/09/22 18:45:05 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,21 +22,21 @@ int main(void)
     {
        std::cout << "what you want?" <<std::endl;
        getline(std::cin, argumente);
-       if (argumente == "add"){
+       if (argumente == "ADD"){
            if (phnbk.add() == 1)
                 continue;
             if (index != 8)
                 index++;
        }
-        else if (argumente == "search") {
+        else if (argumente == "SEARCH") {
             
             phnbk.searsh(index);
         }
-        else if (argumente == "exit") {
+        else if (argumente == "EXIT") {
             std::cout << "exit" << std::endl;
             return (0);
         }
         else
-            std::cout <<"Invalid argument!" << std::endl;
+            std::cout <<"Invalid argument! 'ADD , SEARCH , EXIT'" << std::endl;
     }
 }
