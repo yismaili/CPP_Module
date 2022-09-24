@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 22:38:01 by yismaili          #+#    #+#             */
-/*   Updated: 2022/09/24 16:38:28 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/09/24 17:45:18 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ Zombie* zombieHorde( int N, std::string name ) {
         sso << i;
         _newzombie[i].setName(name + sso.str());
         sso.str("");
-     i++;
+        i++;
     }
     return (_newzombie);
 }
