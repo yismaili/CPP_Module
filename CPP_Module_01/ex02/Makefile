@@ -5,16 +5,15 @@
 #                                                     +:+ +:+         +:+      #
 #    By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/09/23 22:37:23 by yismaili          #+#    #+#              #
-#    Updated: 2022/09/23 22:38:14 by yismaili         ###   ########.fr        #
+#    Created: 2022/09/24 11:27:45 by yismaili          #+#    #+#              #
+#    Updated: 2022/09/24 12:24:13 by yismaili         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = zombie
+NAME = print
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
-SRCS =    Zombie.cpp  main.cpp zombieHorde.cpp
-HDR =  Zombie.hpp
+SRCS =    main.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 BGreen=\033[1;32m
