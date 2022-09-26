@@ -6,11 +6,11 @@
 #    By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/26 12:01:37 by yismaili          #+#    #+#              #
-#    Updated: 2022/09/26 16:27:00 by yismaili         ###   ########.fr        #
+#    Updated: 2022/09/26 16:42:39 by yismaili         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME =  harl
+NAME =   harlFilter
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 SRCS =    main.cpp Harl.cpp 

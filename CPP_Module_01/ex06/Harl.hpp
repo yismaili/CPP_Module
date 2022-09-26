@@ -1,29 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/26 12:02:31 by yismaili          #+#    #+#             */
-/*   Updated: 2022/09/26 16:26:18 by yismaili         ###   ########.fr       */
+/*   Created: 2022/09/26 12:02:37 by yismaili          #+#    #+#             */
+/*   Updated: 2022/09/26 15:29:33 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Harl.hpp"
+#ifndef HARL_HPP
+#define HARL_HPP
 
-int main(void)
+#include <iostream>
+#include <string.h>
+
+class Harl
 {
-    Harl opHarl;
-    
-    std::cout<<"[ DEBUG ] level:" << std::endl;
-    opHarl.debug();
-    std::cout<<"[ INFO ] level:" << std::endl;
-    opHarl.info();
-    std::cout<<"[ WARNING ] level:" << std::endl;
-    opHarl.warning();
-    std::cout<<"[ ERROR ] level:" << std::endl;
-    opHarl.error();
-    std::cout<<"complain :" << std::endl;
-    opHarl.complain("ERROR");
-}
+private:
+    /* data */
+public:
+    Harl(/* args */);
+    ~Harl();
+    void debug( void );
+    void info( void );
+    void warning( void );
+    void error( void );
+    void complain( std::string level );
+};
+
+#endif 
