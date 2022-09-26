@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 12:02:37 by yismaili          #+#    #+#             */
-/*   Updated: 2022/09/26 15:29:33 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/09/26 17:00:43 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ public:
     void info( void );
     void warning( void );
     void error( void );
-    void complain( std::string level );
 };
 
 #endif 

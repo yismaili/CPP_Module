@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 12:02:42 by yismaili          #+#    #+#             */
-/*   Updated: 2022/09/26 15:58:40 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/09/26 17:00:30 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,23 +31,4 @@ void Harl:: warning( void ) {
 }
 void Harl:: error( void ) {
    std::cout<< "This is unacceptable! I want to speak to the manager now." << std::endl;
-}
-
-void Harl:: complain( std::string level ) {
-    
-    int i;
-    std::string levels[] = { "DEGUG", "INFO", "WARNING", "ERROR"};
-
-    i = 0;
-	void (Harl::*methods[]) () = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
-	
-	while (i < 4) {
-		if (level == levels[i])
-        {
-            (this->*methods[i])();
-            return ;
-        }
-		i++;
-	}
-	std::cout << level << " level not found" << std::endl;
 }
