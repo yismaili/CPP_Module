@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/29 10:57:28 by yismaili          #+#    #+#             */
-/*   Updated: 2022/09/29 11:32:24 by yismaili         ###   ########.fr       */
+/*   Created: 2022/09/28 20:56:30 by yismaili          #+#    #+#             */
+/*   Updated: 2022/09/28 20:57:04 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int main( void ) {
 Fixed a;
 Fixed const b( 10 );
-Fixed const c( 42.42f);
+Fixed const c( 42.42f );
 Fixed const d( b );
 a = Fixed( 1234.4321f );
 std::cout << "a is " << a << std::endl;
