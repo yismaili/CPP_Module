@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 15:52:18 by yismaili          #+#    #+#             */
-/*   Updated: 2022/09/29 20:32:17 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/09/29 20:41:27 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,13 @@ ClapTrap:: ClapTrap(std::string  _name)
     this->energyPoints = 10;
     this->attackDamage = 0;
     std::cout <<"init constructor called" <<std::endl;
+    std::cout << std::endl;
 }
 
 ClapTrap::~ClapTrap()
 {
-     std::cout <<"Destructor called" <<std::endl;
+    std::cout <<"Destructor called" <<std::endl;
+    std::cout << std::endl;
 }
 
 void ClapTrap::setName(std::string  _name) {
@@ -65,27 +67,32 @@ void ClapTrap:: attack(const std::string& target) {
     if (hitPoint == 0 || energyPoints == 0)
     {
         std:: cout << name << "  is out points range" << std:: endl;
+        	std::cout << std::endl;
         return ;
     }
     else {
-        std:: cout << "ClapTrap  " <<name <<"  attacks  " <<target<< "  causing  " <<attackDamage << "points of damage! "<< std::endl;
+        std:: cout << "ClapTrap  " <<name <<"  attacks  " <<target<< "  causing  " <<attackDamage << " points of damage! "<< std::endl;
+       	std::cout << std::endl;
         energyPoints--;
     }
 }
 
 void ClapTrap::takeDamage(unsigned int amount) {
     std::cout<< "ClapTrap  " <<name << " amount " << amount <<" hit points " <<std::endl;
+   	std::cout << std::endl;
     hitPoint -= amount;
 }
 
 void ClapTrap::beRepaired (unsigned int amount) {
     if (energyPoints != 0) {
         std:: cout <<"ClapTrap  " <<name << "  ClapTrap has benn repaired amount " << amount <<" hit points " <<std::endl;
+       	std::cout << std::endl;
         hitPoint += amount;
         energyPoints--;
     }
     else {
         std::cout <<name <<"  is out points range" <<std::endl;
+        	std::cout << std::endl;
     }
 }
   
