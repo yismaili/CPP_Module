@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 21:49:21 by yismaili          #+#    #+#             */
-/*   Updated: 2022/09/29 12:59:35 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/09/29 14:09:32 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,10 @@ public:
     Fixed operator++(int);
     Fixed operator--(int);
     Fixed operator--();
-    Fixed min(Fixed &object0, Fixed &object1);
+    Fixed &min(Fixed &object0, Fixed &object1);
+    Fixed &min(Fixed const &rfnc0, Fixed const &rfnc1);
+   static Fixed &max(Fixed &rfnc0, Fixed &rfnc1);
+   static Fixed &max(Fixed const &rfnc0, Fixed const &rfnc1);
 };
 std::ostream &operator<<(std::ostream &outputStream, Fixed const &fixedPoint);
 #endif
