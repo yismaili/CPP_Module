@@ -6,14 +6,11 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 15:52:18 by yismaili          #+#    #+#             */
-/*   Updated: 2022/09/29 20:41:27 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/01 18:20:58 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
-ClapTrap::ClapTrap(){
-    std::cout <<"Default constructor called" <<std::endl;
-}
 
 ClapTrap:: ClapTrap(std::string  _name)
 {
@@ -40,7 +37,11 @@ std::string ClapTrap::getName(void) {
 }
 
 void ClapTrap::setHitPoint(int _hitPoint) {
-   this->hitPoint = _hitPoint; 
+    if (_hitPoint < 0 || isdigit(_hitPoint)) {
+        std:: cout <<"check your parameters!" << std:: endl;
+        exit(0);
+    }
+    this->hitPoint = _hitPoint; 
 }
 
 int ClapTrap::getHitPoint(void) {
@@ -48,7 +49,11 @@ int ClapTrap::getHitPoint(void) {
 }
 
 void ClapTrap:: setEnergyPoints(int _energyPoints) {
-    this->energyPoints = _energyPoints;
+    if (_energyPoints < 0 || isdigit(_energyPoints)) {
+        std:: cout <<"check your parameters!" << std:: endl;
+        exit(0);
+    }
+     this->energyPoints = _energyPoints;
 }
 
 int ClapTrap:: getEnergyPoints(void) {
@@ -56,6 +61,11 @@ int ClapTrap:: getEnergyPoints(void) {
 }
 
 void ClapTrap:: setAttackDamage(int _attackDamage) {
+     if (_attackDamage < 0 || isdigit(_attackDamage)) {
+        std:: cout << "check your parameters!" << std:: endl;
+        exit(0);
+    }
+    else
     this->attackDamage = _attackDamage;
 }
 
