@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 20:19:08 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/04 17:46:55 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/04 19:24:22 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,5 @@ Cat::~Cat()
 }
 
 void Cat::makeSound() const{
-    std::cout <<type<<"Cat make sound"<<std::endl;
+    std::cout <<type<<" sound"<<std::endl;
 }

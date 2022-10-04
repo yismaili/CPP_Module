@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 11:21:12 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/04 17:44:54 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/04 19:24:26 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,5 @@ Dog::~Dog()
 }
 
 void Dog::makeSound() const{
-    std::cout <<type<<"Dog make sound"<<std::endl;
+    std::cout <<type<<" sound"<<std::endl;
 }
