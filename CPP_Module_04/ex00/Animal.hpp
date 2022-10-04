@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 20:15:54 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/02 22:39:32 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/04 17:41:30 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,17 @@
 
 class Animal
 {
-private:
+protected:
     std::string type;
 public:
+    Animal();
     Animal(std::string type);
-    ~Animal();
+    Animal(const Animal &copy);
+    Animal &operator=(const Animal &copyAssign);
+    virtual ~Animal();
+    std::string getType() const;
+    void setType(std::string _type);
+    virtual void makeSound() const;
 };
 
 #endif

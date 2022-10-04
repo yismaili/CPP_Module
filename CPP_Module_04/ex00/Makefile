@@ -6,15 +6,15 @@
 #    By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/02 13:58:36 by yismaili          #+#    #+#              #
-#    Updated: 2022/10/02 13:58:47 by yismaili         ###   ########.fr        #
+#    Updated: 2022/10/04 10:45:15 by yismaili         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME =  Polymorphism
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
-SRCS =    main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
-HDR =  ClapTrap.hpp  ScavTrap.hpp FragTrap.hpp
+SRCS =    main.cpp Dog.cpp Cat.cpp Animal.cpp
+HDR =  Dog.hpp Cat.hpp Animal.hpp
 OBJS = $(SRCS:.cpp=.o)
 
 BGreen=\033[1;32m
