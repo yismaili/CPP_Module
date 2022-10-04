@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 22:38:01 by yismaili          #+#    #+#             */
-/*   Updated: 2022/09/24 17:45:18 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/04 20:14:47 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Zombie* zombieHorde( int N, std::string name ) {
     if (N < 0)
         exit(1);
      _newzombie = new(std:: nothrow) Zombie[N];
-     if (!_newzombie) {
+    if (!_newzombie) {
          std::cout << "no space" << std::endl;
          exit(0);
      }
