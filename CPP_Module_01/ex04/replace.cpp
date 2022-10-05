@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 15:02:20 by yismaili          #+#    #+#             */
-/*   Updated: 2022/09/26 11:54:39 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/05 21:26:04 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,11 @@ std::string	replace::replaceLine(std::string line) {
 		return (line);
 	}
 	lenWord = 0;
-    while ((lenWord = line.find(s1, lenWord)) >= 0) {
-		newLine = line.substr(0, lenWord);
-		newLine += s2;
-		lenWord += s1.length();
-		newLine += line.substr(lenWord);
+    while ((lenWord = line.find(s1, lenWord)) >= 0) { /* Find value in range */
+		newLine = line.substr(0, lenWord);/*replece in new buff */
+		newLine += s2; /* add new word to the renge */
+		lenWord += s1.length(); /* add len of s1 to len wprd */
+		newLine += line.substr(lenWord); /* copy all the line in newline */
 		line = newLine;
     }
     return (line);
@@ -45,22 +45,22 @@ std::string	replace::replaceLine(std::string line) {
 void	replace::replaceStr() {
     
 	std::string		line;
-	std::ifstream	inFile(fileName);
-	std::ofstream	outFile;
+	std::ifstream	inFile(fileName); /* reading input from a file */
+	std::ofstream	outFile; /* for output to a file */
 
 	if (!inFile.is_open()) {
 		std::cout << "you can't open this file "<< fileName << std::endl;
 	}
 	else
     {
-		outFile.open(fileName+".replace", std::ios::trunc);
+		outFile.open(fileName+".replace", std::ios::out);
 		if (!outFile.is_open()) {
 			std::cout << "you can't create this file" << fileName << ".replace" << std::endl;
 			exit (0);
 		}
 		else {
 			while (getline(inFile, line)) {
-				outFile << this->replaceLine(line) << "\n";
+				outFile <<replaceLine(line) << "\n";
 			}
 			inFile.close();
 			outFile.close();
