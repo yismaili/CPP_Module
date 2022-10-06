@@ -6,19 +6,15 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 12:02:42 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/05 21:03:55 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/06 19:27:36 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
 
-Harl::Harl()
-{
-}
+Harl::Harl(){}
 
-Harl::~Harl()
-{
-}
+Harl::~Harl(){}
 
 void Harl:: debug( void ) {
     std::cout <<"I love having extra bacon for my 7XL-double-cheese-triple-pickle-specialketchup burger. I really do!" << std::endl;
@@ -33,18 +29,19 @@ void Harl:: error( void ) {
    std::cout<< "This is unacceptable! I want to speak to the manager now." << std::endl;
 }
 
+void (Harl::*methods[]) (void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+
 void Harl:: complain( std::string level ) {
     
     int i;
     std::string levels[] = { "DEGUG", "INFO", "WARNING", "ERROR"};
 
     i = 0;
-	void (Harl::*methods[]) () = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
 	
 	while (i < 4) {
 		if (level == levels[i])
         {
-            (this->*methods[i])();
+            (this->*methods[i])(); /* using pointer function callback mechanism */
             return ;
         }
 		i++;

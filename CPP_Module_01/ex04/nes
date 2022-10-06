@@ -1,7 +1,0 @@
-Returns whether the stream is currently associated to a file.
-Let us check the below parameters and what is their significance.
-
-string1: This is a string object. This object is the value that can be copied into another string object.
-start: The start specifies the position from which the replace has to work. The character from which the string should be replaced.
-Length: the length parameter defines the number of characters that will be replaced from the given string.
-String2: this will be the string that you would like to replace the string1. It will be the new string which will replace the old one.

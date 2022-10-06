@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 15:02:20 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/05 21:26:04 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/06 19:20:01 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ std::string	replace::replaceLine(std::string line) {
     while ((lenWord = line.find(s1, lenWord)) >= 0) { /* Find value in range */
 		newLine = line.substr(0, lenWord);/*replece in new buff */
 		newLine += s2; /* add new word to the renge */
-		lenWord += s1.length(); /* add len of s1 to len wprd */
+		lenWord += s1.length(); /* add len of s1 to len wprd  pour keep copy the word*/
 		newLine += line.substr(lenWord); /* copy all the line in newline */
 		line = newLine;
     }
