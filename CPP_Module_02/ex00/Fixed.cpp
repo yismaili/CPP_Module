@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 21:04:22 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/06 22:13:25 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/07 20:57:14 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ Fixed::Fixed() {
 }
 
 Fixed::Fixed(Fixed const  &capy) {
-	std::cout << "Copy constructor called" << std::endl; /* the purpose Initialize one object from another of the same type */
+	std::cout << "Copy constructor called" << std::endl; /* This initializes the new object with an already existing object */
 	*this = capy;
 }
 
 void	Fixed::operator=(Fixed const  &capyAssign) {
-	std::cout << "Copy assignment operator called" << std::endl; /* used to copy values from one object to another already existing object */
+	std::cout << "Copy assignment operator called" << std::endl; /* This assigns the value of one object to another object both of which are already exists */
 	this->value =  capyAssign.getRawBits();
 }
 
