@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 21:04:26 by yismaili          #+#    #+#             */
-/*   Updated: 2022/09/28 15:13:29 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/06 21:26:53 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ private:
 public:
     Fixed();
     ~Fixed();
-   void	operator=(Fixed const  &other);
-   	Fixed(const Fixed  &other);
+   void	operator=(Fixed const  &capy);
+   	Fixed(const Fixed  &copy);
    int getRawBits( void ) const;
    void setRawBits( int const raw );
 };

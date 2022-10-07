@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 12:02:42 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/06 19:27:36 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/07 16:04:09 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,6 @@ void Harl:: error( void ) {
    std::cout<< "This is unacceptable! I want to speak to the manager now." << std::endl;
 }
 
-void (Harl::*methods[]) (void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
-
 void Harl:: complain( std::string level ) {
     
     int i;
@@ -40,11 +38,32 @@ void Harl:: complain( std::string level ) {
 	
 	while (i < 4) {
 		if (level == levels[i])
-        {
-            (this->*methods[i])(); /* using pointer function callback mechanism */
-            return ;
-        }
+            break;
 		i++;
 	}
-	std::cout << level << " level not found" << std::endl;
+     switch (i)
+    {
+        case 0:
+            {
+                debug();
+                break;
+            }
+        case 1:
+            {
+                info();
+                break;
+            }
+        case 2:
+            {
+                warning();
+                break;
+            }
+        case 3:
+            {
+                error();
+                break;
+            }
+        default:
+            std::cout << level << " level not found" << std::endl;
+    }
 }
