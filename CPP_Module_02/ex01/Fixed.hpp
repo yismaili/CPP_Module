@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 16:00:30 by yismaili          #+#    #+#             */
-/*   Updated: 2022/09/28 21:39:33 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/08 17:46:51 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,15 +24,15 @@ private:
     static const int  bits = 8;
 public:
     Fixed();
+   	Fixed(const Fixed  &copy);
+    Fixed	&operator=(Fixed const  &copyAssign);
     ~Fixed();
-   void	operator=(Fixed const  &other);
-   	Fixed(const Fixed  &other);
-   int getRawBits( void ) const;
-   void setRawBits( int const raw );
+    int getRawBits( void ) const;
+    void setRawBits( int const raw );
     Fixed(const int nbrInt);
     Fixed(const float nbrFloat);
     float toFloat( void ) const;
     int toInt( void ) const;
 };
-std::ostream &operator<<(std::ostream &outputStream, Fixed const &fixedPoint);
+std::ostream &operator<<(std::ostream &output, Fixed const &fixedP);
 #endif

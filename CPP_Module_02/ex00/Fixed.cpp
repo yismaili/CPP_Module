@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 21:04:22 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/07 20:57:14 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/08 09:35:37 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Fixed::Fixed() {
 	std::cout << "Default constructor called" << std::endl; /* initializes the data members of the class to their default values */
-	value = 10;
+	value = 0;
 }
 
 Fixed::Fixed(Fixed const  &capy) {

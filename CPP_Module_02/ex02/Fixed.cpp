@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 21:49:17 by yismaili          #+#    #+#             */
-/*   Updated: 2022/09/29 14:54:09 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/08 17:52:28 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,14 @@ Fixed::~Fixed()
 {
 }
 
-Fixed::Fixed(Fixed const &object)
+Fixed::Fixed(Fixed const &copy)
 {
-    *this = object;
+    this->value = copy.value; /* or *this->object */
 }
 
-void Fixed::operator=(Fixed const &object) {
-    this->value = object.getRawBits();
+Fixed &Fixed::operator=(Fixed const &copyAssign) {
+    this->value = copyAssign.getRawBits();
+    return (*this);
 }
 
 int Fixed::getRawBits(void) const{
@@ -35,15 +36,15 @@ int Fixed::getRawBits(void) const{
 }
 
 void Fixed:: setRawBits(int const raw) {
-    value = raw;
+   this->value = raw;
 }
 
 Fixed::Fixed(const int nbrInt) {
-    value = nbrInt << bits;
+    this->value = nbrInt << 8;
 }
 
 Fixed:: Fixed(const float nbrFloat) {
-    value = roundf(nbrFloat * 256);
+    this->value = roundf(nbrFloat * 256);
 }
 
 int Fixed:: toInt(void) const{
@@ -54,9 +55,9 @@ float Fixed:: toFloat () const{
     return ((float)value / 256);
 }
 
-std:: ostream &operator<<(std::ostream &outputStream, Fixed const &fixedPoint) {
-    outputStream << fixedPoint.toFloat();
-    return (outputStream);
+std:: ostream &operator<<(std::ostream &output, Fixed const &fixedP) {
+    output << fixedP.toFloat();
+    return (output);
 }
 
 /* The 6 comparison operators : */
