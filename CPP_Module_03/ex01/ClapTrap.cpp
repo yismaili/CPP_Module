@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 19:03:14 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/02 10:50:29 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/09 17:39:57 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,22 @@ ClapTrap:: ClapTrap(std::string  _name)
     this->attackDamage = 0;
     std::cout <<"init constructor called" <<std::endl;
     std::cout << std::endl;
+}
+
+ClapTrap:: ClapTrap(ClapTrap const &copy) {
+    std::cout <<"Copy constructor called" <<std::endl;
+    std::cout << std::endl;
+    *this = copy;
+}
+
+ClapTrap &ClapTrap::operator=(ClapTrap const &copy) {
+    std::cout <<"Copy assignment operators called" <<std::endl;
+    std::cout << std::endl;
+    this->name = copy.name;
+    this->hitPoint = copy.hitPoint;
+    this->energyPoints = copy.energyPoints;
+    this->attackDamage = copy.attackDamage;
+    return (*this);
 }
 
 ClapTrap::~ClapTrap()
@@ -61,10 +77,10 @@ int ClapTrap:: getAttackDamage(void) {
 }
 
 void ClapTrap:: attack(const std::string& target) {
-    if (hitPoint == 0 || energyPoints == 0)
+    if (hitPoint <= 0 || energyPoints <= 0)
     {
-        std:: cout << name << "  is out points range" << std:: endl;
-        	std::cout << std::endl;
+        std:: cout << name << " Has no hit points or energy points left" << std:: endl;
+        std::cout << std::endl;
         return ;
     }
     else {
@@ -81,7 +97,7 @@ void ClapTrap::takeDamage(unsigned int amount) {
 }
 
 void ClapTrap::beRepaired (unsigned int amount) {
-    if (energyPoints != 0) {
+    if (energyPoints >= 0) {
         std:: cout <<"ClapTrap  " <<name << "  ClapTrap has benn repaired amount " << amount <<" hit points " <<std::endl;
        	std::cout << std::endl;
         hitPoint += amount;
@@ -89,7 +105,7 @@ void ClapTrap::beRepaired (unsigned int amount) {
     }
     else {
         std::cout <<name <<"  is out points range" <<std::endl;
-        	std::cout << std::endl;
+        std::cout << std::endl;
     }
 }
   

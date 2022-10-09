@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 15:02:20 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/07 17:43:38 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/09 20:24:24 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ std::string	replace::replaceLine(std::string line) {
 		newLine += line.substr(lenWord); /* copy all the line in newline */;
 		line = newLine;
     }
-    return (newLine);
+    return (line);
 }
 
 void	replace::replaceStr() {

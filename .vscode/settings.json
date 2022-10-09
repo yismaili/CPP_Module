@@ -26,7 +26,6 @@
         "cwchar": "cpp",
         "cwctype": "cpp",
         "exception": "cpp",
-        "fstream": "cpp",
         "functional": "cpp",
         "initializer_list": "cpp",
         "ios": "cpp",
@@ -41,7 +40,6 @@
         "new": "cpp",
         "ostream": "cpp",
         "ratio": "cpp",
-        "sstream": "cpp",
         "stdexcept": "cpp",
         "streambuf": "cpp",
         "string": "cpp",
@@ -50,6 +48,7 @@
         "tuple": "cpp",
         "type_traits": "cpp",
         "typeinfo": "cpp",
-        "utility": "cpp"
+        "utility": "cpp",
+        "__functional_03": "cpp"
     }
 }

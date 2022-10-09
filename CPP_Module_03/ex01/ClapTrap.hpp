@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 19:04:03 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/01 21:46:24 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/09 17:08:50 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ protected:
    int          attackDamage;
 public:
     ClapTrap(std::string  _name);
+    ClapTrap(ClapTrap const &copy);
+    ClapTrap &operator=(ClapTrap const &copy);
     ~ClapTrap();
     void attack(const std::string& target);
     void takeDamage(unsigned int amount);

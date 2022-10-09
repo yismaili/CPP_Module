@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 15:52:18 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/01 18:20:58 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/09 17:39:12 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,22 @@ ClapTrap:: ClapTrap(std::string  _name)
     this->attackDamage = 0;
     std::cout <<"init constructor called" <<std::endl;
     std::cout << std::endl;
+}
+
+ClapTrap:: ClapTrap(ClapTrap const &copy) {
+    std::cout <<"Copy constructor called" <<std::endl;
+    std::cout << std::endl;
+    *this = copy;
+}
+
+ClapTrap &ClapTrap::operator=(ClapTrap const &copy) {
+    std::cout <<"Copy assignment operators called" <<std::endl;
+    std::cout << std::endl;
+    this->name = copy.name;
+    this->hitPoint = copy.hitPoint;
+    this->energyPoints = copy.energyPoints;
+    this->attackDamage = copy.attackDamage;
+    return (*this);
 }
 
 ClapTrap::~ClapTrap()
@@ -37,10 +53,6 @@ std::string ClapTrap::getName(void) {
 }
 
 void ClapTrap::setHitPoint(int _hitPoint) {
-    if (_hitPoint < 0 || isdigit(_hitPoint)) {
-        std:: cout <<"check your parameters!" << std:: endl;
-        exit(0);
-    }
     this->hitPoint = _hitPoint; 
 }
 
@@ -49,10 +61,6 @@ int ClapTrap::getHitPoint(void) {
 }
 
 void ClapTrap:: setEnergyPoints(int _energyPoints) {
-    if (_energyPoints < 0 || isdigit(_energyPoints)) {
-        std:: cout <<"check your parameters!" << std:: endl;
-        exit(0);
-    }
      this->energyPoints = _energyPoints;
 }
 
@@ -61,11 +69,6 @@ int ClapTrap:: getEnergyPoints(void) {
 }
 
 void ClapTrap:: setAttackDamage(int _attackDamage) {
-     if (_attackDamage < 0 || isdigit(_attackDamage)) {
-        std:: cout << "check your parameters!" << std:: endl;
-        exit(0);
-    }
-    else
     this->attackDamage = _attackDamage;
 }
 
@@ -74,10 +77,10 @@ int ClapTrap:: getAttackDamage(void) {
 }
 
 void ClapTrap:: attack(const std::string& target) {
-    if (hitPoint == 0 || energyPoints == 0)
+    if (hitPoint <= 0 || energyPoints <= 0)
     {
-        std:: cout << name << "  is out points range" << std:: endl;
-        	std::cout << std::endl;
+        std:: cout << name << " Has no hit points or energy points left" << std:: endl;
+        std::cout << std::endl;
         return ;
     }
     else {
@@ -88,20 +91,20 @@ void ClapTrap:: attack(const std::string& target) {
 }
 
 void ClapTrap::takeDamage(unsigned int amount) {
+    hitPoint -= amount;
     std::cout<< "ClapTrap  " <<name << " amount " << amount <<" hit points " <<std::endl;
    	std::cout << std::endl;
-    hitPoint -= amount;
 }
 
 void ClapTrap::beRepaired (unsigned int amount) {
     if (energyPoints != 0) {
-        std:: cout <<"ClapTrap  " <<name << "  ClapTrap has benn repaired amount " << amount <<" hit points " <<std::endl;
-       	std::cout << std::endl;
         hitPoint += amount;
         energyPoints--;
+        std:: cout <<"ClapTrap  " <<name << "  ClapTrap has benn repaired amount " << amount <<" hit points " <<std::endl;
+       	std::cout << std::endl;
     }
     else {
-        std::cout <<name <<"  is out points range" <<std::endl;
+        std::cout <<name <<" is out points range!!" <<std::endl;
         	std::cout << std::endl;
     }
 }
