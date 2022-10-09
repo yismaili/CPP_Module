@@ -6,17 +6,17 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 15:02:20 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/09 20:24:24 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/09 21:38:25 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "replace.hpp"
 
-replace::replace(std:: string s1_, std:: string s2_, std:: string fileName_)
+replace::replace(std:: string fileName_, std:: string s1_, std:: string s2_)
 {
+    this->fileName = fileName_;
     this->s1 = s1_;
     this->s2 = s2_;
-    this->fileName = fileName_;
 }
 
 replace::~replace()

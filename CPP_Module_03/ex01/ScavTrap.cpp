@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 19:41:03 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/09 19:08:08 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/09 20:38:41 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@ ScavTrap::ScavTrap(std::string _name) : ClapTrap(_name)
     this->hitPoint = 100;
     this->energyPoints = 50;
     this->attackDamage = 20;
-    std::cout <<" ScavTrap init constructor called" <<std::endl;
+    std::cout <<"ScavTrap init constructor called" <<std::endl;
     std::cout << std::endl; 
 }
 
 ScavTrap:: ScavTrap(ScavTrap const &copy) : ClapTrap(copy)
 {
-    std::cout <<" ScavTrap Copy constructor called" <<std::endl;
+    std::cout <<"ScavTrap Copy constructor called" <<std::endl;
     std::cout << std::endl;
     this->name = name + "Scav";
     this->hitPoint=getHitPoint();

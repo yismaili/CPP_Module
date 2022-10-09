@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 15:00:02 by yismaili          #+#    #+#             */
-/*   Updated: 2022/09/26 11:54:19 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/09 21:37:24 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ private:
     std::string s2;
     std::string fileName;
 public:
-    replace(std:: string s1_, std:: string s2_, std:: string fileName_);
+    replace(std:: string fileName_, std:: string s1_, std:: string s2_);
     ~replace();
     std::string replaceLine(std::string line);
     void replaceStr();
