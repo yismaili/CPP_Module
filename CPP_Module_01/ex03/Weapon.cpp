@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/24 18:33:53 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/06 13:43:18 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/10 21:14:31 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,6 @@
 Weapon::Weapon(std::string _type)
 {
     this->type= _type;
-}
-Weapon::Weapon()
-{
 }
 Weapon::~Weapon()
 {

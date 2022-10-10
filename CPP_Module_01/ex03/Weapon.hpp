@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/24 18:33:57 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/06 13:43:42 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/10 21:13:39 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ class Weapon
 private:
     std::string type;
 public:
-    Weapon();
     Weapon(std::string type);
     ~Weapon();
     const std::string &getType();

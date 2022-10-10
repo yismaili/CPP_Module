@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 16:29:19 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/04 17:03:13 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/10 11:47:41 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,6 @@ WrongCat::~WrongCat()
 }
 
 void	WrongCat::makeSound() {
-	std::cout << type <<"cat make sound"<< std::endl;
+	std::cout << type <<"WrongCat: mieww"<< std::endl;
 }
 

@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 12:03:50 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/04 19:23:01 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/10 11:41:32 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	main(void) {
 	const WrongAnimal *WrgAnimal = new WrongAnimal();
 	const WrongAnimal *wcat = new WrongCat();
 
-	std::cout << animal->getType()<<" "<<std::endl;
+	//std::cout << animal->getType()<<" "<<std::endl;
 	std::cout << dog->getType()<<" "<<std::endl;
 	std::cout << cat->getType()<<" "<<std::endl;
 	std::cout << WrgAnimal->getType()<<" "<<std::endl;

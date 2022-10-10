@@ -6,11 +6,12 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 15:02:20 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/09 21:38:25 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/10 21:30:47 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "replace.hpp"
+#include <string>
 
 replace::replace(std:: string fileName_, std:: string s1_, std:: string s2_)
 {
@@ -38,6 +39,8 @@ std::string	replace::replaceLine(std::string line) {
 		lenWord += s1.length(); /* add len of s1 to len wprd  pour keep copy the word*/
 		newLine += line.substr(lenWord); /* copy all the line in newline */;
 		line = newLine;
+		if (newLine == line)
+			break;
     }
     return (line);
 }
