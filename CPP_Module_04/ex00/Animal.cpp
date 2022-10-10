@@ -6,11 +6,12 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 20:15:50 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/04 17:38:09 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/10 10:17:43 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
+
 Animal::Animal()
 {
      this->type = "";
@@ -33,7 +34,7 @@ Animal::~Animal()
      std::cout <<"Animal: destructor called"<<std::endl;
 }
 
-void Animal::setType(std::string _type) {
+void Animal::setType(std::string const _type) {
      this->type = _type;
 }
 

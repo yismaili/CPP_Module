@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 20:15:54 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/04 17:41:30 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/10 10:18:12 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ public:
     Animal &operator=(const Animal &copyAssign);
     virtual ~Animal();
     std::string getType() const;
-    void setType(std::string _type);
+    void setType(std::string const _type);
     virtual void makeSound() const;
 };
 
