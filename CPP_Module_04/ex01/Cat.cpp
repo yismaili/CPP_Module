@@ -6,16 +6,17 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 20:19:08 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/04 19:24:22 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/11 19:44:41 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
-Cat::Cat() //: Animal(type)
+Cat::Cat()
 {
     this->type="Cat";
     std::cout <<"Cat: default constructor called"<<std::endl;
+    brn = new Brain();
 }
 
 Cat::Cat(const Cat &copy) {
@@ -25,6 +26,10 @@ Cat::Cat(const Cat &copy) {
 Cat &Cat:: operator=(const Cat &copyAssign) {
     this->type = copyAssign.getType();
     std::cout <<"Cat: copy assignment operator called"<<std::endl;
+    if (brn)
+        delete(brn);
+    brn = new Brain();
+    *brn = *(copyAssign.brn);
     return (*this);
 }
 Cat::~Cat()

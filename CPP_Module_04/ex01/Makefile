@@ -6,15 +6,15 @@
 #    By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/02 13:58:36 by yismaili          #+#    #+#              #
-#    Updated: 2022/10/04 20:49:06 by yismaili         ###   ########.fr        #
+#    Updated: 2022/10/11 19:37:34 by yismaili         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME =  Brain
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
-SRCS =    main.cpp Dog.cpp Cat.cpp Animal.cpp WrongAnimal.cpp WrongCat.cpp
-HDR =  Dog.hpp Cat.hpp Animal.hpp WrongAnimal.hpp WrongCat.hpp
+SRCS =    main.cpp Dog.cpp Cat.cpp Animal.cpp WrongAnimal.cpp WrongCat.cpp  Brain.cpp
+HDR =  Dog.hpp Cat.hpp Animal.hpp WrongAnimal.hpp WrongCat.hpp  Brain.hpp
 OBJS = $(SRCS:.cpp=.o)
 
 BGreen=\033[1;32m

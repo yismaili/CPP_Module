@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 12:02:31 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/10 21:48:54 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/11 13:56:46 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ int main(void)
     std::cout<<"[ ERROR ] level:" << std::endl;
     opHarl.error();
     std::cout<<"complain :" << std::endl;
-    opHarl.complain("ERROR");
+    opHarl.complain("DEBUG");
 }

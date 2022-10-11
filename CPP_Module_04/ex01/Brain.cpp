@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 20:57:47 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/04 21:04:22 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/11 19:46:37 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,12 @@ Brain:: Brain(const Brain &copy) {
 }
 
 Brain &Brain:: operator=(const Brain &copyAssign) {
-    int count = 100;
-    for (size_t i = 0; i < count; i++)
-    {
+    int i = 0;
+   while (i > 100)
+   {
         this->ideas[i] = copyAssign.ideas[i];
-    }
+        i++;
+   }
     return (*this);
 }
 Brain::~Brain()
