@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 21:00:34 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/16 21:50:00 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/16 23:21:43 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,26 +17,70 @@ Bureaucrat::Bureaucrat(/* args */)
 }
 Bureaucrat::Bureaucrat(const std:: string name, int grade) :   Name(name) ,Grade(grade)
 {
-   if (grade < 1 || grade > 150)
-        std::cout <<" grade that ranges from 1 to 150" << std::endl;
-   
+    if (this->Grade < 1) {
+        throw(GradeTooLowException());
+    }
+    if (this->Grade > 150) {
+        throw(GradeTooLowException());
+    }
 }
 Bureaucrat::Bureaucrat(Bureaucrat const &copy)
 {
-   if (this->Grade < 1 || this->Grade > 150)
-        std::cout <<" grade that ranges from 1 to 150" << std::endl;
-    this->Name = copy.Name;
-    this->Grade = copy.Grade;
-   
+   *this = copy;
 }
+
+Bureaucrat &Bureaucrat::operator=(Bureaucrat const &copyAssig) {
+    if (this->Grade < 1) {
+        throw(GradeTooLowException());
+    }
+    if (this->Grade > 150) {
+        throw(GradeTooLowException());
+    }
+    this->Grade = copyAssig.Grade;
+    return (*this);
+}
+
 Bureaucrat::~Bureaucrat()
 {
 }
 
-int Bureaucrat::getGrad(void) {
-    return(Grade);
+const char * Bureaucrat::GradeTooLowException::what() const throw() {
+	return "Grade is too low";
 }
 
-void Bureaucrat::getGrad(int grade) {
-   this->Grade = grade;
+const char * Bureaucrat::GradeTooHighException::what() const throw() {
+	return "Grade is too high";
+}
+
+
+int Bureaucrat::getGrade()const {
+    return(Grade);
+}
+ std::string Bureaucrat::getName()const{
+    return (Name);
+ }
+ int Bureaucrat::incrementGrade() {
+    if (this->Grade < 1) {
+        throw(GradeTooLowException());
+    }
+    if (this->Grade > 150) {
+        throw(GradeTooLowException());
+    }
+    this->Grade++;
+    return(0);
+ }
+ 
+ int Bureaucrat::decrementGrade() {
+    if (this->Grade < 1) {
+        throw(GradeTooLowException());
+    }
+    if (this->Grade > 150) {
+        throw(GradeTooLowException());
+    }
+    this->Grade--;
+    return(0);
+ }
+std::ostream &operator<<(std::ostream &outPutStrm, const Bureaucrat &refr) {
+	outPutStrm << refr.getName()<< ", bureaucrat grade " <<refr.getGrade() << std::endl;
+	return outPutStrm;
 }
