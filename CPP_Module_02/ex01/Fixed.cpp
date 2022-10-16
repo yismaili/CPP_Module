@@ -41,11 +41,11 @@ void Fixed::setRawBits( int const raw ) {
 	this->value = raw;
 }
 Fixed::Fixed(const int nbrInt) {
-	this->value = nbrInt * 256;
+	this->value = nbrInt << 8;
     std::cout <<"Int constructor called" << std::endl;
 }
 Fixed::Fixed(const float nbrFloat) {
-    this->value = roundf(nbrFloat * 256);
+    this->value = roundf(nbrFloat *256);
     std::cout <<"Float constructor called"<< std::endl;
 }
 int Fixed:: toInt( void ) const {
@@ -54,7 +54,7 @@ int Fixed:: toInt( void ) const {
 float Fixed:: toFloat( void ) const {
     return ((float)value / 256);
 }
-std::ostream &operator<<(std::ostream &output, Fixed const &fixedP) {
+std::ostream &operator<<(std::ostream &output, Fixed const &fixedP) { /* ostream operator overloading */
 
 	output << fixedP.toFloat();
 	return (output);
