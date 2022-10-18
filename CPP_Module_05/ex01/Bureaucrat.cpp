@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 21:00:34 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/17 16:42:22 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/18 21:42:23 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,4 +95,15 @@ int Bureaucrat::getGrade()const {
 std::ostream &operator<<(std::ostream &outPutStrm, const Bureaucrat &refr) {
 	outPutStrm << refr.getName()<< ", bureaucrat grade " <<refr.getGrade() << std::endl;
 	return outPutStrm;
+}
+
+void Bureaucrat::signForm(Form &form) {
+	try {
+		form.beSigned(*this);
+	}
+	catch (std::exception & e) {
+		std::cout << Name << " could not Sign " << form.getName() << " because " << e.what() << std::endl;
+		return ;
+	}
+	std::cout << Name<< " Signed " << form.getName() << std::endl;
 }

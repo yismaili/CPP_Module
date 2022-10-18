@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 19:04:03 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/09 17:08:50 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/18 15:15:54 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ class ClapTrap
 {
 protected:
    std::string  name;
-   int          hitPoint;
    int          energyPoints;
    int          attackDamage;
 public:
+   int          hitPoint;
     ClapTrap(std::string  _name);
     ClapTrap(ClapTrap const &copy);
     ClapTrap &operator=(ClapTrap const &copy);

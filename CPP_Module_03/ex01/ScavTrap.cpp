@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 19:41:03 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/18 12:06:26 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/18 14:13:55 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ ScavTrap:: ScavTrap(ScavTrap const &copy) : ClapTrap(copy)
     // this->hitPoint=getHitPoint();
     // this->energyPoints=getEnergyPoints();
     // this->attackDamage=getAttackDamage();
+    
 }
 
 ScavTrap &ScavTrap::operator=(ScavTrap  const &copy) {

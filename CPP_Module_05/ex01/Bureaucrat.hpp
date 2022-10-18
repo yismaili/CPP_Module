@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 19:45:30 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/17 15:46:07 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/18 21:52:07 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 #define BUREAUCRAT_HPP
 
 #include <iostream>
-
+#include "Form.hpp"
+class Form;
 class Bureaucrat
 {
 private:
@@ -33,6 +34,7 @@ public:
 			virtual const char* what() const throw();
 		};
 	std::string getName()const;
+    void signForm(Form &form);
     int getGrade()const;
     int incrementGrade();
     int decrementGrade();
