@@ -5,16 +5,16 @@
 #                                                     +:+ +:+         +:+      #
 #    By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/10/01 19:30:36 by yismaili          #+#    #+#              #
-#    Updated: 2022/10/18 12:34:31 by yismaili         ###   ########.fr        #
+#    Created: 2022/10/16 23:19:40 by yismaili          #+#    #+#              #
+#    Updated: 2022/10/17 16:47:42 by yismaili         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME =  open
+NAME =  Form
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
-SRCS =    main.cpp ClapTrap.cpp ScavTrap.cpp
-HDR =  ClapTrap.hpp  ScavTrap.hpp
+SRCS =    main.cpp Bureaucrat.cpp Form.cpp
+HDR =  Bureaucrat.hpp Form.hpp
 OBJS = $(SRCS:.cpp=.o)
 
 BGreen=\033[1;32m
@@ -31,7 +31,7 @@ all : $(NAME)
 
 $(NAME): $(OBJS)
 	@echo "$(BYellow) Make $(BGreen) $@"
-	@$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
+	@$(CC) -o $@ $^
 
 clean:
 	@echo "$(BBlue) Clean"

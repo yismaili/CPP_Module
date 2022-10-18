@@ -6,7 +6,7 @@
 #    By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/29 15:00:29 by yismaili          #+#    #+#              #
-#    Updated: 2022/09/29 15:01:36 by yismaili         ###   ########.fr        #
+#    Updated: 2022/10/18 12:34:49 by yismaili         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ all : $(NAME)
 
 $(NAME): $(OBJS)
 	@echo "$(BYellow) Make $(BGreen) $@"
-	@$(CC) -o $@ $^
+	@$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
 
 clean:
 	@echo "$(BBlue) Clean"

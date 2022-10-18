@@ -6,15 +6,15 @@
 #    By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/01 19:30:36 by yismaili          #+#    #+#              #
-#    Updated: 2022/10/18 12:34:31 by yismaili         ###   ########.fr        #
+#    Updated: 2022/10/18 12:33:15 by yismaili         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME =  open
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
-SRCS =    main.cpp ClapTrap.cpp ScavTrap.cpp
-HDR =  ClapTrap.hpp  ScavTrap.hpp
+SRCS =    main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
+HDR =  ClapTrap.hpp  ScavTrap.hpp FragTrap.hpp
 OBJS = $(SRCS:.cpp=.o)
 
 BGreen=\033[1;32m
