@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 16:47:19 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/20 14:20:26 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/20 20:08:04 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,11 +72,14 @@ int Form:: getGradeExecute() const {
 }
 
 const char * Form::GradeTooLowException::what() const throw() {
-	return "grade is low";
+	return ("grade is low");
 }
 
 const char * Form::GradeTooHighException::what() const throw() {
-	return "grade is high";
+	return ("grade is high");
+}
+const char * Form::FormNotSigned::what() const throw() {
+    return ("This form is not signed");
 }
 
 std::ostream &operator<<(std::ostream &outPutStrm, const Form &refr) {
@@ -92,7 +95,7 @@ void Form:: beSigned(const Bureaucrat &Brcrat) {
     }
     else{
         throw(GradeTooLowException());
-    }
-    
+    }  
 }
+
 

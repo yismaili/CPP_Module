@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 21:00:34 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/18 21:42:23 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/20 20:56:44 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,4 +106,15 @@ void Bureaucrat::signForm(Form &form) {
 		return ;
 	}
 	std::cout << Name<< " Signed " << form.getName() << std::endl;
+}
+
+void Bureaucrat::executeForm(Form const & form) {
+    try
+    {
+        form.execute(*this);
+    }
+    catch(const std::exception& e)
+    {
+        std::cout <<Name<< " not execute : "<<e.what()<<std::endl; 
+    }
 }

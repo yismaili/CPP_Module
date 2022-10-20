@@ -6,15 +6,15 @@
 #    By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/16 23:19:40 by yismaili          #+#    #+#              #
-#    Updated: 2022/10/17 16:47:42 by yismaili         ###   ########.fr        #
+#    Updated: 2022/10/20 19:59:15 by yismaili         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME =  Form
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
-SRCS =    main.cpp Bureaucrat.cpp Form.cpp
-HDR =  Bureaucrat.hpp Form.hpp
+SRCS =    main.cpp Bureaucrat.cpp Form.cpp ShrubberyCreationForm.cpp  RobotomyRequestForm.cpp PresidentialPardonForm.cpp 
+HDR =  Bureaucrat.hpp Form.hpp PresidentialPardonForm.hpp ShrubberyCreationForm.hpp RobotomyRequestForm.hpp
 OBJS = $(SRCS:.cpp=.o)
 
 BGreen=\033[1;32m

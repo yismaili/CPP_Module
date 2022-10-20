@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 16:47:27 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/20 14:20:47 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/20 20:56:05 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,14 +33,18 @@ public:
     class GradeTooLowException : public std::exception {
 			virtual const char* what() const throw();
 		};
-	class GradeTooHighException : public std::exception {
+	  class GradeTooHighException : public std::exception {
 			virtual const char* what() const throw();
 		};
+    class FormNotSigned : public std::exception {
+      virtual const char* what() const throw();
+    };
     std::string getName() const;
     bool getSigned() const;
     int getGradeSign() const;
     int getGradeExecute() const;
     void beSigned(const Bureaucrat &Brcrat);
+    virtual void execute(Bureaucrat const & executor) const = 0;
 };
 
 #endif

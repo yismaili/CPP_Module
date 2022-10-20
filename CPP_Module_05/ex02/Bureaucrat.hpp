@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 19:45:30 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/18 21:52:07 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/20 20:07:10 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <iostream>
 #include "Form.hpp"
+
 class Form;
 class Bureaucrat
 {
@@ -38,6 +39,7 @@ public:
     int getGrade()const;
     int incrementGrade();
     int decrementGrade();
+    void executeForm(Form const & form);
 };
 std::ostream &operator<<(std::ostream &outPutStrm, const Bureaucrat &refr);
 #endif
