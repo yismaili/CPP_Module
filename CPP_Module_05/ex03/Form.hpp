@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 16:47:27 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/20 20:56:05 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/21 13:00:09 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ public:
     Form(std::string _name , bool _signed, const int _gradeSign, const int _gradeExecute);
     Form(Form const &copy);
     Form &operator=(Form const &copyAssig);
-    ~Form();
+   virtual ~Form();
     class GradeTooLowException : public std::exception {
 			virtual const char* what() const throw();
 		};

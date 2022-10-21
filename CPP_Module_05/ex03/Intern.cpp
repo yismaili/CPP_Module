@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 21:22:54 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/21 11:57:32 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/21 12:58:24 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ Intern &Intern::operator=(const Intern &copyAssig)
 {
     (void)copyAssig;
     std::cout<<"Intern Copy assignment operator called"<<std::endl;
+    return (*this);
 }
 
 Intern::~Intern()
@@ -35,11 +36,7 @@ Intern::~Intern()
 
 Form *Intern::makeForm(const std::string &form, const std::string &target) {
     std::string str[3] = {"shrubbery creation", "robotomy request", "presidential pardon"};
-    Form *ptr[3] = {
-        new ShrubberyCreationForm(target),
-		new RobotomyRequestForm(target),
-		new PresidentialPardonForm(target)
-    };
+    Form *ptr[3] = {new ShrubberyCreationForm(target),new RobotomyRequestForm(target),new PresidentialPardonForm(target)};
     
     int i = 0;
     int len = -1337;
@@ -61,6 +58,6 @@ Form *Intern::makeForm(const std::string &form, const std::string &target) {
     return (ptr[len]);
 }
 
-const char *Intern::FormNotFound::what() const throw() {
+const char* Intern::FormNotFound::what() const throw() {
     return ("Form not found");
 }

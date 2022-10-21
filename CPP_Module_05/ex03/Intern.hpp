@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 09:48:12 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/21 12:00:57 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/21 12:56:02 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 #include "RobotomyRequestForm.hpp"
 #include "ShrubberyCreationForm.hpp"
 
-class Intern :public Form
+class Intern
 {
 private:
     /* data */
