@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 15:48:13 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/19 15:37:29 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/21 16:00:54 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 WrongAnimal::WrongAnimal()
 {
-    this->type = "";
+    this->type = "Wrong Animal";
     std::cout <<"WrongAnimal: default constructor called"<<std::endl;
 }
 
@@ -42,6 +42,6 @@ std::string WrongAnimal:: getType() const{
     return (type);
 }
 
-void WrongAnimal:: makeSound() const{
-    std::cout <<type<<"WrongAnimal: make sound"<< std::endl;
+void WrongAnimal:: makeSound(){
+    std::cout <<type<<" make sound"<< std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 20:15:50 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/10 10:17:43 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/21 15:47:23 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Animal::Animal()
 {
-     this->type = "";
+     this->type = "Animal";
      std::cout <<"Animal: default constructor called"<<std::endl;
 }
 
@@ -42,5 +42,5 @@ std::string Animal::getType() const {
      return (type);
 }
  void Animal:: makeSound() const{
-     std::cout <<type<<"make sound"<<std::endl;
+     std::cout <<type<<" make sound"<<std::endl;
 }

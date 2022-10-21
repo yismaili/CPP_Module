@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 15:48:36 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/04 17:42:10 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/21 16:01:02 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,6 @@ public:
     ~WrongAnimal();
     void setType(std::string _type);
     std::string getType() const;
-    void makeSound() const;
+    void makeSound();
 };
 #endif

@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 21:22:54 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/21 12:58:24 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/21 14:33:45 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,16 +42,16 @@ Form *Intern::makeForm(const std::string &form, const std::string &target) {
     int len = -1337;
     while (i < 3)
     {
-        if (str[i] == form) {
-            len = i;
-            std::cout<<"Intern creates "<< form<<std::endl;
+        if (str[i] != form) {
+            delete ptr[i];
         }
         else{
-            
-            delete ptr[i];
+            std::cout<<"Intern creates "<<str[i]<<std::endl;
+            len = i;
         }
         i++;
     }
+    
     if (len == -1337) {
         throw(FormNotFound());
     }

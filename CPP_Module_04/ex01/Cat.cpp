@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 20:19:08 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/11 19:44:41 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/21 17:27:54 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Cat::Cat()
 
 Cat::Cat(const Cat &copy) {
     this->type = copy.getType();
-      std::cout <<"Cat: copy constructor called"<<std::endl;
+    std::cout <<"Cat: copy constructor called"<<std::endl;
 }
 Cat &Cat:: operator=(const Cat &copyAssign) {
     this->type = copyAssign.getType();
@@ -38,5 +38,5 @@ Cat::~Cat()
 }
 
 void Cat::makeSound() const{
-    std::cout <<type<<" sound"<<std::endl;
+    std::cout <<type<<" meiaw"<<std::endl;
 }

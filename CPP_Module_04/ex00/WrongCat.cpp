@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 16:29:19 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/10 11:47:41 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/21 15:57:11 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 WrongCat::WrongCat()
 {
-    this->type = "";
+    this->type = "Wrong cat";
     std::cout <<"WrongCat: default constructor called"<<std::endl;
 }
 
@@ -32,7 +32,7 @@ WrongCat::~WrongCat()
     std::cout <<"WrongCat: destructor called"<<std::endl;
 }
 
-void	WrongCat::makeSound() {
-	std::cout << type <<"WrongCat: mieww"<< std::endl;
+void	WrongCat::makeSound(){
+	std::cout << type <<" mieww"<< std::endl;
 }
 

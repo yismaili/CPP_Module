@@ -6,39 +6,42 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 12:03:50 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/10 13:47:33 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/21 17:24:25 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 #include "Dog.hpp"
 #include "WrongCat.hpp"
-
-int	main(void) {
 	
-	const Animal *animal = new Animal();
-	const Animal *dog = new Dog();
-	const Animal *cat = new Cat();
+	int	main(void) {
 
-	const WrongAnimal *WrgAnimal = new WrongAnimal();
-	const WrongAnimal *wcat = new WrongCat();
+	const Animal	*animal[2];
+	int i = 0;
+	while (i < 2) {
+		if (i % 2 == 0){
+			animal[i] = new Cat();
+		}
+		else {
+			animal[i] = new Dog();	
+		}
+		i++;
+	}
+	i = 0;
+	while (i < 2) {
+		std::cout << animal[i]->getType() << std::endl;
+		i++;
+	}
+	i = 0;
+	while (i < 2)
+	{
+		delete animal[i];
+		i++;
+	}
+	std::cout << std::endl;
 
-	std::cout << dog->getType()<<" "<<std::endl;
-	std::cout << cat->getType()<<" "<<std::endl;
-	std::cout << WrgAnimal->getType()<<" "<<std::endl;
-	std::cout << wcat->getType()<<" "<<std::endl;
-
-	cat->makeSound();
-	dog->makeSound();
-	animal->makeSound();
-	WrgAnimal->makeSound();
-	wcat->makeSound();
-
-	delete animal;
-	delete cat;
-	delete dog;
-	delete WrgAnimal;
-	delete wcat;
-
+	Cat	basic;
+	Cat tmp (basic);
 	return (0);
 }
+	

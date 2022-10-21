@@ -6,14 +6,14 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 20:15:50 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/04 17:38:09 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/21 16:17:54 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 Animal::Animal()
 {
-     this->type = "";
+     this->type = "Animal";
      std::cout <<"Animal: default constructor called"<<std::endl;
 }
 

@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 12:03:50 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/19 15:35:32 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/21 16:01:34 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,31 +15,27 @@
 #include "WrongCat.hpp"
 
 int	main(void) {
-	
-	const Animal *animal = new Animal();
-	const Animal *dog = new Dog();
-	const Animal *cat = new Cat();
 
-	const WrongAnimal *WrgAnimal = new WrongAnimal();
-	const WrongAnimal *wcat = new WrongCat();
+const Animal* meta = new Animal();
+const Animal* j = new Dog();
+const Animal* i = new Cat();
+ WrongAnimal *WrgAnimal = new WrongAnimal();
+ WrongAnimal *wcat = new WrongCat();
 
-	std::cout << animal->getType()<<" "<<std::endl;
-	std::cout << dog->getType()<<" "<<std::endl;
-	std::cout << cat->getType()<<" "<<std::endl;
-	std::cout << WrgAnimal->getType()<<" "<<std::endl;
-	std::cout << wcat->getType()<<" "<<std::endl;
+std::cout << j->getType() << " " << std::endl;
+std::cout << i->getType() << " " << std::endl;
+std::cout << wcat->getType()<<" "<<std::endl;
 
-	cat->makeSound();
-	dog->makeSound();
-	animal->makeSound();
-	WrgAnimal->makeSound();
-	wcat->makeSound();
+i->makeSound(); //will output the cat sound!
+j->makeSound();
+meta->makeSound();
+WrgAnimal->makeSound();
+wcat->makeSound();
 
-	delete animal;
-	delete cat;
-	delete dog;
-	delete WrgAnimal;
-	delete wcat;
-
-	return (0);
+delete meta;
+delete j;
+delete i;
+delete WrgAnimal;
+delete wcat;
+return (0);
 }

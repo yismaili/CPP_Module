@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 16:29:19 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/04 17:03:13 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/21 16:19:35 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ WrongCat::~WrongCat()
     std::cout <<"WrongCat: destructor called"<<std::endl;
 }
 
-void	WrongCat::makeSound() {
-	std::cout << type <<"cat make sound"<< std::endl;
+void WrongCat::makeSound() {
+	std::cout << type <<" meiaw"<< std::endl;
 }
 
