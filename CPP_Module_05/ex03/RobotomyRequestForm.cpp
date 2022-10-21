@@ -6,7 +6,7 @@
 /*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 13:56:27 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/21 11:57:46 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/20 21:09:54 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 RobotomyRequestForm::RobotomyRequestForm()
 {
     this->target = "";
-    std::cout<<"Robotomy Request Form Default Constructor called"<<std::endl;
+    std::cout<<"Robotomy Request Form Default Constructor called of RobotomyRequestForm"<<std::endl;
 }
 
 RobotomyRequestForm::RobotomyRequestForm(std::string target_):Form(getTarget(), 0,72,45)
 {
     this->target = target_;
-    std::cout<<" Robotomy Request Form Constructor called"<<std::endl;
+    std::cout<<" Robotomy Request Form Constructor called of RobotomyRequestForm"<<std::endl;
 }
 
 RobotomyRequestForm:: RobotomyRequestForm(const RobotomyRequestForm &copy):Form(getTarget(), 0, 72, 45){
@@ -56,4 +56,3 @@ void RobotomyRequestForm::execute(Bureaucrat const & executor) const {
     }
     std::cout<<executor.getName()<<" executed "<<getTarget()<<std::endl;
 }
-
