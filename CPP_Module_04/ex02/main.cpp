@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: yismaili < yismaili@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/04 12:03:50 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/21 17:42:00 by yismaili         ###   ########.fr       */
+/*   Created: 200022/10/04 12:03:50 by yismaili          #+#    #+#             */
+/*   Updated: 2022/10/23 14:34:26 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 	
 	int	main(void) {
 
-	const Animal	*animal[2];
+	Animal	*animal[2];
 	int i = 0;
 	while (i < 2) {
 		if (i % 2 == 0){
@@ -28,20 +28,25 @@
 		i++;
 	}
 	i = 0;
+	//Cat *tmpe  = (Cat*)animal[0];
+	//Cat *tmpe  = new Cat(*(Cat*)animal[0]);
 	while (i < 2) {
 		std::cout << animal[i]->getType() << std::endl;
 		i++;
 	}
 	i = 0;
+	animal[1] = animal[0];
 	while (i < 2)
 	{
-		delete animal[i];
+		if (animal[i] != animal[i + 1])
+			delete animal[i];
 		i++;
 	}
+	//std::cout <<"hey >>>" <<tmpe->getType() << std::endl;
 	std::cout << std::endl;
-
-	Cat	basic;
-	Cat tmp (basic);
+	Cat ob;
+	Cat tmp (ob);
+	//std::cout <<"hey >>>" <<tmp.getType() << std::endl;
 	return (0);
 }
 	

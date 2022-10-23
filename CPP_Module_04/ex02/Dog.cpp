@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: yismaili < yismaili@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 11:21:12 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/11 19:36:55 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/23 16:36:48 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,22 @@
 
 Dog::Dog()
 {
-    this->type="Dog";
+    this->type = "Dog";
     brn = new Brain();
     std::cout <<"Dog: default constructor called"<<std::endl;
 }
 
-Dog::Dog(const Dog &copy) {
-   this->type = copy.getType();
+Dog::Dog(const Dog &copy) :Animal(copy){
    std::cout <<"Dog: copy constructor called"<<std::endl;
    this->brn = NULL;
-    
+   *this = copy;
 }
 Dog &Dog:: operator=(const Dog &copyAssign) {
-    this->type = copyAssign.getType();
     std::cout <<"Dog: copy assignment operator called"<<std::endl;
-    if (brn)
-        delete(brn);
+    this->type = copyAssign.getType();
+    delete(brn);
     brn = new Brain();
-    *brn = *(copyAssign.brn);
+    this->brn = copyAssign.brn;
     return (*this);
 }
 Dog::~Dog()
@@ -41,5 +39,5 @@ Dog::~Dog()
 }
 
 void Dog::makeSound() const{
-    std::cout <<type<<" sound"<<std::endl;
+    std::cout <<type<<" HawHaw"<<std::endl;
 }

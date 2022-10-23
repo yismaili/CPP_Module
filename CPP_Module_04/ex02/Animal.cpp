@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: yismaili < yismaili@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 20:15:50 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/21 17:42:48 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/23 16:54:35 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 Animal::Animal()
 {
-     this->type = "";
+     this->type = "Animal";
      std::cout <<"Animal: default constructor called"<<std::endl;
 }
 
@@ -40,3 +40,4 @@ void Animal::setType(std::string _type) {
 std::string Animal::getType() const {
      return (type);
 }
+ 

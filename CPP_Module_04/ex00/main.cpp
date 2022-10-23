@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: yismaili < yismaili@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 12:03:50 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/21 16:01:34 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/23 14:08:12 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 
 int	main(void) {
 
-const Animal* meta = new Animal();
-const Animal* j = new Dog();
-const Animal* i = new Cat();
+ Animal* meta = new Animal();
+ Animal* j = new Dog();
+ Animal* i = new Cat();
  WrongAnimal *WrgAnimal = new WrongAnimal();
  WrongAnimal *wcat = new WrongCat();
 
