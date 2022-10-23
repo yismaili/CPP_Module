@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: yismaili < yismaili@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 20:57:47 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/21 17:18:40 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/23 23:26:34 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ Brain::Brain()
 }
 
 Brain:: Brain(const Brain &copy) {
+    std::cout <<"Brain: Copy constructor called"<<std::endl;
     *this = copy;
 }
 
@@ -34,3 +35,11 @@ Brain::~Brain()
 {
     std::cout <<"Brain: destructor called"<<std::endl;
 }
+// std::string Brain::getIdeas() const{
+//     return (ideas[0]);
+// }
+// std::ostream &operator<<(std::ostream &outPutStrm, const Brain &refr) {
+// 	outPutStrm << refr.getIdeas() << std::endl;
+// 	return outPutStrm;
+// }
+

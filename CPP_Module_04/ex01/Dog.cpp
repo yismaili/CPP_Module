@@ -6,7 +6,7 @@
 /*   By: yismaili < yismaili@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 11:21:12 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/23 22:55:55 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/23 23:22:37 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ Dog::Dog()
 
 Dog::Dog(const Dog &copy){
    std::cout <<"Dog: copy constructor called"<<std::endl;
-  this->brn = NULL;
    *this =copy;
 }
 Dog &Dog:: operator=(const Dog &copyAssign) {

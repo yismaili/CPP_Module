@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: yismaili < yismaili@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 20:15:50 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/21 16:17:54 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/23 23:26:08 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ Animal::Animal(const Animal &copy) {
 
 Animal &Animal:: operator=(const Animal &copyAssign) {
      this->type = copyAssign.getType();
-     std::cout <<"Animal: copy assignment operator called"<<std::endl;
+    // std::cout <<"Animal: copy assignment operator called"<<std::endl;
      return (*this);
 }
 

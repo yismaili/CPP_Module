@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: yismaili < yismaili@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 20:52:10 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/11 19:05:15 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/23 23:24:44 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ public:
     Brain(const Brain  &copy);
     Brain &operator=(const Brain &copyAssign);
     ~Brain();
+   // std::string getIdeas() const;
 };
-
+//std::ostream &operator<<(std::ostream &outPutStrm, const Brain &refr);
 #endif
