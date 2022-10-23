@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: yismaili < yismaili@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 16:47:19 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/18 21:51:26 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/23 23:37:42 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Form::Form(const std::string _name, bool _signed, const int _gradeSign, const in
     if (this->gradeSign> 150) {
         throw(GradeTooLowException());
     }
-    std::cout <<"Default constructor called"<<std::endl;
+    std::cout <<"Default constructor of Form called"<<std::endl;
 }
 Form::Form(Form const &copy)
 :name(copy.name), signed_(copy.signed_),gradeSign(copy.gradeSign) ,gradeExecute(copy.gradeExecute)
@@ -32,7 +32,7 @@ Form::Form(Form const &copy)
     if (this->gradeSign> 150) {
         throw(GradeTooLowException());
     }
-    std::cout <<"Copy constructor called"<<std::endl;
+    std::cout <<"Copy constructor of Form called"<<std::endl;
 }
 Form &Form::operator=(Form const &copyAssig)
 {
@@ -42,13 +42,14 @@ Form &Form::operator=(Form const &copyAssig)
     if (this->gradeSign> 150) {
         throw(GradeTooLowException());
     }
-    std::cout <<"Copy assignment operator called"<<std::endl;
+   // std::cout <<"Copy assignment operator called"<<std::endl;
     this->signed_=copyAssig.signed_;
     return (*this);
 }
 
 Form::~Form()
 {
+    std::cout <<" Destructor of Form called"<<std::endl;
 }
 
 std::string Form:: getName() const {

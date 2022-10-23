@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: yismaili < yismaili@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 23:10:24 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/17 16:41:04 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/23 23:49:31 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,8 @@
 int main(void) {
 	try
 	{
-		Bureaucrat	objt1("objt1", 1);
+		Bureaucrat	objt1("objt1", 2);
 		Bureaucrat	objt2("objt2", 50);
-
 		std::cout << objt1.getName() <<" before increment grade "<< objt1.getGrade() <<std::endl;
 		objt1.incrementGrade();
 		std::cout << objt1 <<std::endl;
