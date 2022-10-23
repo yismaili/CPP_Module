@@ -6,7 +6,7 @@
 /*   By: yismaili < yismaili@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 21:00:34 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/23 23:48:49 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/23 23:55:30 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ Bureaucrat::Bureaucrat(/* args */)
     std::cout <<"Default constructor called"<<std::endl;
 }
 Bureaucrat::Bureaucrat(const std:: string name, int grade) :Name(name)
-{  if (this->Grade < 1) {
+{  if (grade < 1) {
         throw(GradeTooHighException());
     }
-    if (this->Grade > 150) {
+    if (grade > 150) {
         throw(GradeTooLowException());
     }
     this->Grade = grade;
@@ -33,10 +33,10 @@ Bureaucrat::Bureaucrat(Bureaucrat const &copy)
 }
 
 Bureaucrat &Bureaucrat::operator=(Bureaucrat const &copyAssig) {
-   if (this->Grade < 1) {
+   if (copyAssig.getGrade() < 1) {
         throw(GradeTooHighException());
     }
-    if (this->Grade > 150) {
+    if (copyAssig.getGrade() > 150) {
         throw(GradeTooLowException());
     }
     this->Grade = copyAssig.Grade;
