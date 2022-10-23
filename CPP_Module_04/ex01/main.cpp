@@ -35,7 +35,7 @@
 		i++;
 	}
 	i = 0;
-	animal[1] = animal[0];
+	//animal[1] = animal[0];
 	while (i < 2)
 	{
 		if (animal[i] != animal[i + 1])
@@ -44,9 +44,14 @@
 	}
 	//std::cout <<"hey >>>" <<tmpe->getType() << std::endl;
 	std::cout << std::endl;
-	Cat ob;
-	Cat tmp (ob);
-	//std::cout <<"hey >>>" <<tmp.getType() << std::endl;
+	// Dog	basic;
+	// {
+	// 	Dog tmp = basic;
+	// }
+	Cat	basic2;
+	{
+		Cat tmp2 = basic2;
+	}
 	return (0);
 }
 	

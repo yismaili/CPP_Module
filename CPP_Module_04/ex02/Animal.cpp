@@ -6,7 +6,7 @@
 /*   By: yismaili < yismaili@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 20:15:50 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/23 16:54:35 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/23 23:01:28 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,3 @@ void Animal::setType(std::string _type) {
 std::string Animal::getType() const {
      return (type);
 }
- 

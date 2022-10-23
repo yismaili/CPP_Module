@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #include "Cat.hpp"
 #include "Dog.hpp"
 #include "WrongCat.hpp"
@@ -28,25 +29,23 @@
 		i++;
 	}
 	i = 0;
-	//Cat *tmpe  = (Cat*)animal[0];
-	//Cat *tmpe  = new Cat(*(Cat*)animal[0]);
 	while (i < 2) {
 		std::cout << animal[i]->getType() << std::endl;
 		i++;
 	}
 	i = 0;
-	animal[1] = animal[0];
 	while (i < 2)
 	{
 		if (animal[i] != animal[i + 1])
 			delete animal[i];
 		i++;
 	}
-	//std::cout <<"hey >>>" <<tmpe->getType() << std::endl;
 	std::cout << std::endl;
-	Cat ob;
-	Cat tmp (ob);
-	//std::cout <<"hey >>>" <<tmp.getType() << std::endl;
+	Cat	basic2;
+	{
+		Cat tmp2 = basic2;
+	}
 	return (0);
 }
+	
 	
