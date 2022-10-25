@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   RobotomyRequestForm.cpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: yismaili < yismaili@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 13:56:27 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/21 11:57:46 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/24 18:30:41 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,28 +15,29 @@
 RobotomyRequestForm::RobotomyRequestForm()
 {
     this->target = "";
-    std::cout<<"Robotomy Request Form Default Constructor called"<<std::endl;
+    std::cout<<"Default Constructor Robotomy Request Form called"<<std::endl;
 }
 
 RobotomyRequestForm::RobotomyRequestForm(std::string target_):Form(getTarget(), 0,72,45)
 {
     this->target = target_;
-    std::cout<<" Robotomy Request Form Constructor called"<<std::endl;
+    std::cout<<" Constructor Robotomy Request Form called"<<std::endl;
 }
 
 RobotomyRequestForm:: RobotomyRequestForm(const RobotomyRequestForm &copy):Form(getTarget(), 0, 72, 45){
     *this = copy;
-    std::cout <<"Robotomy Request Form Copy Constructor called"<<std::endl;
+    std::cout <<" Copy Constructor of Robotomy Request Form called"<<std::endl;
 }
 
 RobotomyRequestForm &RobotomyRequestForm::operator=(const RobotomyRequestForm &copyAssig){
+   // std::cout <<"Copy assignment operator of Robotomy Request Form called"<<std::endl;
     this->target=copyAssig.target;
-    std::cout <<"Robotomy Request Form Copy assignment operator called"<<std::endl;
     return (*this);
 }
 
 RobotomyRequestForm::~RobotomyRequestForm()
 {
+    std::cout <<"Destructor of Robotomy Request Form called"<<std::endl;
 }
 
 std::string RobotomyRequestForm::getTarget() const{

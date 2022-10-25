@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: yismaili < yismaili@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 16:47:27 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/18 21:50:17 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/24 15:11:46 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ private:
    const int         gradeSign;
    const int         gradeExecute;
 public:
+    Form();
     Form(std::string _name , bool _signed, const int _gradeSign, const int _gradeExecute);
     Form(Form const &copy);
     Form &operator=(Form const &copyAssig);
@@ -41,5 +42,5 @@ public:
     int getGradeExecute() const;
     void beSigned(const Bureaucrat &Brcrat);
 };
-
+std::ostream &operator<<(std::ostream &outPutStrm, const Form &refr);
 #endif

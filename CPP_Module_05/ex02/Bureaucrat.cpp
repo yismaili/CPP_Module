@@ -6,11 +6,9 @@
 /*   By: yismaili < yismaili@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 21:00:34 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/23 23:38:59 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/24 14:23:21 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "Bureaucrat.hpp"
 
 #include "Bureaucrat.hpp"
 
@@ -19,10 +17,10 @@ Bureaucrat::Bureaucrat(/* args */)
     std::cout <<"Default constructor called"<<std::endl;
 }
 Bureaucrat::Bureaucrat(const std:: string name, int grade) :Name(name)
-{  if (this->Grade < 1) {
+{  if (grade < 1) {
         throw(GradeTooHighException());
     }
-    if (this->Grade > 150) {
+    if (grade > 150) {
         throw(GradeTooLowException());
     }
     this->Grade = grade;
@@ -35,10 +33,10 @@ Bureaucrat::Bureaucrat(Bureaucrat const &copy)
 }
 
 Bureaucrat &Bureaucrat::operator=(Bureaucrat const &copyAssig) {
-   if (this->Grade < 1) {
+   if (copyAssig.getGrade() < 1) {
         throw(GradeTooHighException());
-    }
-    if (this->Grade > 150) {
+    }                                                                                                                                           
+    if (copyAssig.getGrade() > 150) {
         throw(GradeTooLowException());
     }
     this->Grade = copyAssig.Grade;
@@ -51,18 +49,18 @@ Bureaucrat::~Bureaucrat()
 }
 
 const char * Bureaucrat::GradeTooLowException::what() const throw() {
-	return "grade is low";
+	return "Grade to low";
 }
 
 const char * Bureaucrat::GradeTooHighException::what() const throw() {
-	return "grade is high";
+	return "Grade to high";
 }
 
 
-int Bureaucrat::getGrade()const {
+int Bureaucrat::getGrade() const {
     return(Grade);
 }
- std::string Bureaucrat::getName()const{
+ std::string Bureaucrat::getName() const{
     return (Name);
  }
  int Bureaucrat::incrementGrade() {

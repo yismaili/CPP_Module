@@ -6,7 +6,7 @@
 /*   By: yismaili < yismaili@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 21:00:34 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/23 23:55:30 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/24 11:38:05 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ Bureaucrat::Bureaucrat(Bureaucrat const &copy)
 Bureaucrat &Bureaucrat::operator=(Bureaucrat const &copyAssig) {
    if (copyAssig.getGrade() < 1) {
         throw(GradeTooHighException());
-    }
+    }                                                                                                                                           
     if (copyAssig.getGrade() > 150) {
         throw(GradeTooLowException());
     }
@@ -49,18 +49,18 @@ Bureaucrat::~Bureaucrat()
 }
 
 const char * Bureaucrat::GradeTooLowException::what() const throw() {
-	return "grade is low";
+	return "Grade to low";
 }
 
 const char * Bureaucrat::GradeTooHighException::what() const throw() {
-	return "grade is high";
+	return "Grade to high";
 }
 
 
-int Bureaucrat::getGrade()const {
+int Bureaucrat::getGrade() const {
     return(Grade);
 }
- std::string Bureaucrat::getName()const{
+ std::string Bureaucrat::getName() const{
     return (Name);
  }
  int Bureaucrat::incrementGrade() {
