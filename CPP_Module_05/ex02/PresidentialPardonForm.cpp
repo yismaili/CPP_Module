@@ -6,7 +6,7 @@
 /*   By: yismaili < yismaili@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 13:19:49 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/24 18:28:49 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/25 15:28:51 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,11 +46,15 @@ std::string PresidentialPardonForm::getTarget() const{
 }
 
 void PresidentialPardonForm:: execute(Bureaucrat const & executor) const{
-    if (getGradeExecute() > executor.getGrade()){
-        throw(GradeTooLowException());
-    }
     if (!getSigned()){
         throw(FormNotSigned());
     }
+    if (getGradeExecute() > executor.getGrade()){
+        throw(GradeTooLowException());
+    }
     std::cout<<executor.getName()<<" executed "<<getTarget()<<std::endl;
+}
+
+const char *  PresidentialPardonForm::FormNotSigned::what() const throw() {
+    return ("This form is not signed");
 }

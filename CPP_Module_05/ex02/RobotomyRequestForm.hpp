@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: yismaili < yismaili@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 18:27:44 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/20 21:08:13 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/25 10:53:33 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,9 @@ public:
     std::string getTarget() const;
     void setTarget(std::string _target);
     void execute(Bureaucrat const & executor) const;
+     class FormNotSigned : public std::exception {
+        virtual const char* what() const throw();
+    };
 };
 
 #endif

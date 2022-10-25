@@ -6,7 +6,7 @@
 /*   By: yismaili < yismaili@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 19:09:51 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/24 18:39:34 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/25 15:39:02 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,27 +59,28 @@ ShrubberyCreationForm::~ShrubberyCreationForm()
     if (getGradeExecute() < executor.getGrade()){
         throw(GradeTooLowException());
     }
-    outPut.open(getName() + "_shrubbery");
+    outPut.open(getTarget() + "_shrubbery");
 	if (!outPut.is_open() || !outPut.good())
 		throw (FileError());
-	outPut << "             *** |**** *                   \n";
-	outPut << "    	      * ****|****  ***                \n";
-	outPut << "          *** --*|*** }-****               \n";
-	outPut << "         **--*- -||-**-_-**-_*             \n";
-	outPut << "       ***  --***|- -- * ***               \n";
-	outPut << "     **_-_*-_-** | *-***_-_****            \n";
-	outPut << "    ** **** * - *| -  **** **-**           \n";
-	outPut << "    ~__*_--***` }|{,***---***-~~           \n";
-	outPut << "                }|{                		  \n";
-	outPut << "                }|{                        \n";
-	outPut << "                }|{                        \n";
-	outPut << "                {|}                        \n";
-	outPut << "          ~~~~=~{|}~~~~                    \n";
-	outPut << "              [  }  ]                      \n";
-	outPut << "                 {                         \n";
+outPut<<"	           \"/ |    |/\n";
+outPut<<"        \"/ / \"||/  /_/___/_\n";
+outPut<<"         \"/   |/ \"/\n";
+outPut<<"    _\"__\"__\"  |  /_____/_\n";
+outPut<<"           \'  | /          /\n";
+outPut<<"  __ _-----`  |{,-----------~\n";
+outPut<<"           \' }{\n";
+outPut<<"             }{{\n";
+outPut<<"             }}{\n";
+outPut<<"             {{}\n";
+outPut<<"      , -=-~{ .-^- _\n";
+outPut<<"            `}\n";
+outPut<<"             {\n";
  }
  
  const char* ShrubberyCreationForm::FileError::what() const throw() {
 	return "Error open file";
 }
 
+const char *  ShrubberyCreationForm::FormNotSigned::what() const throw() {
+    return ("This form is not signed");
+}

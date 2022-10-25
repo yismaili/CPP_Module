@@ -6,7 +6,7 @@
 /*   By: yismaili < yismaili@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 13:56:27 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/24 18:30:41 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/25 11:48:36 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ RobotomyRequestForm::RobotomyRequestForm(std::string target_):Form(getTarget(), 
 }
 
 RobotomyRequestForm:: RobotomyRequestForm(const RobotomyRequestForm &copy):Form(getTarget(), 0, 72, 45){
-    *this = copy;
+    this->target = copy.target;
     std::cout <<" Copy Constructor of Robotomy Request Form called"<<std::endl;
 }
 
@@ -49,12 +49,19 @@ void RobotomyRequestForm::setTarget(std::string _target){
 }
 
 void RobotomyRequestForm::execute(Bureaucrat const & executor) const {
-     if (getGradeExecute() > executor.getGrade()){
-        throw(GradeTooLowException());
-    }
     if (!getSigned()){
         throw(FormNotSigned());
     }
-    std::cout<<executor.getName()<<" executed "<<getTarget()<<std::endl;
+    if (getGradeExecute() < executor.getGrade()){
+        throw(GradeTooLowException());
+    }
+	srand(time(NULL));
+	if (rand() % 2 == 0)
+		std::cout << target << "Has been robotomized successfully." << std::endl;
+	else
+		std::cout << target << "The robotomy failed.." << std::endl;
 }
 
+const char *  RobotomyRequestForm::FormNotSigned::what() const throw() {
+    return ("This form is not signed");
+}

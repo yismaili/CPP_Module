@@ -6,7 +6,7 @@
 /*   By: yismaili < yismaili@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 21:00:34 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/24 14:23:21 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/25 14:16:37 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ Bureaucrat::Bureaucrat(const std:: string name, int grade) :Name(name)
         throw(GradeTooLowException());
     }
     this->Grade = grade;
-    std::cout <<"Constructor called"<<std::endl;
+    std::cout <<"Constructor of Bureaucrat called"<<std::endl;
 }
 Bureaucrat::Bureaucrat(Bureaucrat const &copy)
 {
@@ -45,7 +45,7 @@ Bureaucrat &Bureaucrat::operator=(Bureaucrat const &copyAssig) {
 
 Bureaucrat::~Bureaucrat()
 {
-    std::cout <<"Destructor called" <<std::endl;
+    std::cout <<"Destructor of Bureaucrat called" <<std::endl;
 }
 
 const char * Bureaucrat::GradeTooLowException::what() const throw() {

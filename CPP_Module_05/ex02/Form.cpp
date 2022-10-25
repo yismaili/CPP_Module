@@ -6,7 +6,7 @@
 /*   By: yismaili < yismaili@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 16:47:19 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/24 17:21:57 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/25 15:22:50 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ Form::Form(const std::string _name, bool _signed, const int _gradeSign, const in
 :name(_name), signed_(_signed),gradeSign(_gradeSign) ,gradeExecute(_gradeExecute)
 {
     std::cout <<"Constructor of Form called"<<std::endl;
-    if (this->gradeSign < 1) {
+    if (this->gradeSign < 1 || getGradeExecute() < 1) {
         throw(GradeTooHighException());
     }
-    if (this->gradeSign > 150) {
+    if (this->gradeSign > 150 || getGradeExecute() > 150) {
         throw(GradeTooLowException());
     }
 }
@@ -32,21 +32,15 @@ Form::Form(Form const &copy)
 :name(copy.name), signed_(copy.signed_),gradeSign(copy.gradeSign) ,gradeExecute(copy.gradeExecute)
 {
     std::cout <<"Copy constructor of Form called"<<std::endl;
-    if (this->gradeSign < 1) {
+     if (this->gradeSign < 1 || getGradeExecute() < 1) {
         throw(GradeTooHighException());
     }
-    if (this->gradeSign > 150) {
+    if (this->gradeSign > 150 || getGradeExecute() > 150) {
         throw(GradeTooLowException());
     }
 }
 Form &Form::operator=(Form const &copyAssig)
 {
-    // if (this->gradeSign < 1) {
-    //     throw(GradeTooHighException());
-    // }
-    // if (this->gradeSign > 150) {
-    //     throw(GradeTooLowException());
-    // }
     this->signed_=copyAssig.signed_;
     return (*this);
 }
@@ -88,14 +82,11 @@ std::ostream &operator<<(std::ostream &outPutStrm, const Form &refr) { /* operat
 
 void Form:: beSigned(const Bureaucrat &Brcrat) {
     
-    if (Brcrat.getGrade() >= getGradeSign()){
-        this->signed_ = 1;
+    if (Brcrat.getGrade() <= getGradeSign()){
+        this->signed_ = true;
     }
     else{
         throw(GradeTooLowException());
     } 
 }
 
-const char * Form::FormNotSigned::what() const throw() {
-    return ("This form is not signed");
-}

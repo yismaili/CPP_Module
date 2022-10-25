@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: yismaili < yismaili@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 19:34:19 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/20 21:06:32 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/25 10:53:47 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,9 @@ public:
     class FileError : public std::exception {
 			virtual const char* what() const throw();
 		};
+  class FormNotSigned : public std::exception {
+        virtual const char* what() const throw();
+    };
 };
 
 #endif
