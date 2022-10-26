@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Intern.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: yismaili < yismaili@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 21:22:54 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/21 14:33:45 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/26 18:06:33 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,20 +26,23 @@ Intern::Intern(const Intern &copy)
 Intern &Intern::operator=(const Intern &copyAssig)
 {
     (void)copyAssig;
-    std::cout<<"Intern Copy assignment operator called"<<std::endl;
+   // std::cout<<"Intern Copy assignment operator called"<<std::endl;
     return (*this);
 }
 
 Intern::~Intern()
 {
+    std::cout<<"Distructor of Intern called"<<std::endl;
 }
 
 Form *Intern::makeForm(const std::string &form, const std::string &target) {
+    int i;
+    int len;
     std::string str[3] = {"shrubbery creation", "robotomy request", "presidential pardon"};
     Form *ptr[3] = {new ShrubberyCreationForm(target),new RobotomyRequestForm(target),new PresidentialPardonForm(target)};
     
-    int i = 0;
-    int len = -1337;
+    i = 0;
+    len = -2;
     while (i < 3)
     {
         if (str[i] != form) {
@@ -52,7 +55,7 @@ Form *Intern::makeForm(const std::string &form, const std::string &target) {
         i++;
     }
     
-    if (len == -1337) {
+    if (len == -2) {
         throw(FormNotFound());
     }
     return (ptr[len]);

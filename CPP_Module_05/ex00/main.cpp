@@ -6,7 +6,7 @@
 /*   By: yismaili < yismaili@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 23:10:24 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/23 23:49:31 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/26 15:35:02 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ int main(void) {
 	{
 		Bureaucrat	objt1("objt1", 2);
 		Bureaucrat	objt2("objt2", 50);
+	//objt1.getName() = "ghjdcgdfj";
 		std::cout << objt1.getName() <<" before increment grade "<< objt1.getGrade() <<std::endl;
 		objt1.incrementGrade();
 		std::cout << objt1 <<std::endl;

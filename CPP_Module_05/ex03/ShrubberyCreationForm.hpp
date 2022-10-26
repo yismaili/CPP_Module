@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: yismaili < yismaili@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 19:34:19 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/20 21:06:32 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/26 16:26:31 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,15 @@ public:
     ShrubberyCreationForm(const ShrubberyCreationForm &copy);
     ShrubberyCreationForm &operator=(const ShrubberyCreationForm &copyAssig);
     ~ShrubberyCreationForm();
-    std::string getTarget() const;
+    const std::string &getTarget() const;
     void setTarget(std::string _target);
     void execute(Bureaucrat const & executor) const;
     class FileError : public std::exception {
 			virtual const char* what() const throw();
 		};
+    class FormNotSigned : public std::exception {
+        virtual const char* what() const throw();
+    };
 };
 
 #endif

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: yismaili < yismaili@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 19:45:30 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/20 20:07:10 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/26 16:01:53 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ public:
 	class GradeTooHighException : public std::exception {
 			virtual const char* what() const throw();
 		};
-	std::string getName()const;
-    void signForm(Form &form);
+	const std::string &getName()const;
+    void signForm(Bureaucrat const &brcrat, Form &form);
     int getGrade()const;
     int incrementGrade();
     int decrementGrade();

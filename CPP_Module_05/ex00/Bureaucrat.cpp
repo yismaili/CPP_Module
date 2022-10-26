@@ -6,7 +6,7 @@
 /*   By: yismaili < yismaili@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 21:00:34 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/24 11:38:05 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/26 15:50:32 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,19 +26,14 @@ Bureaucrat::Bureaucrat(const std:: string name, int grade) :Name(name)
     this->Grade = grade;
     std::cout <<"Constructor called"<<std::endl;
 }
-Bureaucrat::Bureaucrat(Bureaucrat const &copy)
+Bureaucrat::Bureaucrat(Bureaucrat const &copy) :Name(copy.Name)
 {
    *this = copy;
     std::cout <<"Copy constructor called"<<std::endl;
 }
 
 Bureaucrat &Bureaucrat::operator=(Bureaucrat const &copyAssig) {
-   if (copyAssig.getGrade() < 1) {
-        throw(GradeTooHighException());
-    }                                                                                                                                           
-    if (copyAssig.getGrade() > 150) {
-        throw(GradeTooLowException());
-    }
+  
     this->Grade = copyAssig.Grade;
     return (*this);
 }
@@ -56,32 +51,31 @@ const char * Bureaucrat::GradeTooHighException::what() const throw() {
 	return "Grade to high";
 }
 
-
 int Bureaucrat::getGrade() const {
     return(Grade);
 }
- std::string Bureaucrat::getName() const{
+ const std::string &Bureaucrat::getName() const{
     return (Name);
  }
  int Bureaucrat::incrementGrade() {
-     if (this->Grade < 1) {
+    this->Grade++;
+    if (this->Grade < 1) {
         throw(GradeTooHighException());
     }
     if (this->Grade > 150) {
         throw(GradeTooLowException());
     }
-    this->Grade++;
     return(0);
  }
  
  int Bureaucrat::decrementGrade() {
-     if (this->Grade < 1) {
+    this->Grade--;
+    if (this->Grade < 1) {
         throw(GradeTooHighException());
     }
     if (this->Grade > 150) {
         throw(GradeTooLowException());
     }
-    this->Grade--;
     return(0);
  }
  

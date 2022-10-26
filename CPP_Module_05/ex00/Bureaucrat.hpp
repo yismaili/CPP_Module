@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: yismaili < yismaili@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 19:45:30 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/17 15:46:07 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/26 17:57:15 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 class Bureaucrat
 {
 private:
-    const std:: string Name;
+     std:: string Name;
     int         Grade;
 public:
     Bureaucrat();
@@ -32,7 +32,7 @@ public:
 	class GradeTooHighException : public std::exception {
 			virtual const char* what() const throw();
 		};
-	std::string getName()const;
+	const std::string &getName() const;
     int getGrade()const;
     int incrementGrade();
     int decrementGrade();

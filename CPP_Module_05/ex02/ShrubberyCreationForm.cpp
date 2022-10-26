@@ -6,7 +6,7 @@
 /*   By: yismaili < yismaili@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 19:09:51 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/25 15:39:02 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/26 16:26:18 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ ShrubberyCreationForm::~ShrubberyCreationForm()
     std::cout <<"Destructor of Shrubbery Creation Form called"<<std::endl;
 }
  
- std::string ShrubberyCreationForm:: getTarget() const{
+ const std::string &ShrubberyCreationForm:: getTarget() const{
     return (target);
  } 
  
@@ -60,7 +60,7 @@ ShrubberyCreationForm::~ShrubberyCreationForm()
         throw(GradeTooLowException());
     }
     outPut.open(getTarget() + "_shrubbery");
-	if (!outPut.is_open() || !outPut.good())
+	if (!outPut.is_open() || !outPut.good()) /* check if the stream is good enough to work */
 		throw (FileError());
 outPut<<"	           \"/ |    |/\n";
 outPut<<"        \"/ / \"||/  /_/___/_\n";
@@ -78,7 +78,7 @@ outPut<<"             {\n";
  }
  
  const char* ShrubberyCreationForm::FileError::what() const throw() {
-	return "Error open file";
+	return "Error !!can't open this file for writing";
 }
 
 const char *  ShrubberyCreationForm::FormNotSigned::what() const throw() {

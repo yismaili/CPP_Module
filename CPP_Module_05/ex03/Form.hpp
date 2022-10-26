@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: yismaili < yismaili@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 16:47:27 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/21 13:00:09 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/26 17:31:47 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,22 +29,20 @@ public:
     Form(std::string _name , bool _signed, const int _gradeSign, const int _gradeExecute);
     Form(Form const &copy);
     Form &operator=(Form const &copyAssig);
-   virtual ~Form();
+    virtual ~Form();
     class GradeTooLowException : public std::exception {
 			virtual const char* what() const throw();
 		};
 	  class GradeTooHighException : public std::exception {
 			virtual const char* what() const throw();
 		};
-    class FormNotSigned : public std::exception {
-      virtual const char* what() const throw();
-    };
-    std::string getName() const;
+    const std::string &getName() const;
     bool getSigned() const;
     int getGradeSign() const;
     int getGradeExecute() const;
     void beSigned(const Bureaucrat &Brcrat);
-    virtual void execute(Bureaucrat const & executor) const = 0;
+    virtual void execute(Bureaucrat const & executor) const = 0; /* br vrtl function prototype define hear */
 };
+std::ostream &operator<<(std::ostream &outPutStrm, const Form &refr);
 
 #endif

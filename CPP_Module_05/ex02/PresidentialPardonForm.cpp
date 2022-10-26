@@ -6,7 +6,7 @@
 /*   By: yismaili < yismaili@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 13:19:49 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/25 15:28:51 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/26 17:08:38 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ PresidentialPardonForm::PresidentialPardonForm(std::string target_):Form(getTarg
     std::cout <<"Constructor of Presidential Pardon Form called"<<std::endl;
 }
 
-PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm  &copy):Form(copy.getTarget(), 0, 25, 5)
+PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm  &copy):Form(copy.target, 0, 25, 5)
 {
     this->target = copy.getTarget();
     std::cout <<"Copy constructor of Presidential Pardon Form called"<<std::endl;
@@ -41,20 +41,20 @@ PresidentialPardonForm::~PresidentialPardonForm()
 {
     std::cout <<"Destructor of Presidential Pardon Form called"<<std::endl;
 }
-std::string PresidentialPardonForm::getTarget() const{
+const std::string &PresidentialPardonForm::getTarget() const{
     return (target);
 }
 
 void PresidentialPardonForm:: execute(Bureaucrat const & executor) const{
-    if (!getSigned()){
+    if (getSigned() == false){
         throw(FormNotSigned());
     }
     if (getGradeExecute() > executor.getGrade()){
         throw(GradeTooLowException());
     }
-    std::cout<<executor.getName()<<" executed "<<getTarget()<<std::endl;
+    std::cout<<executor<<" executed "<< *this<<std::endl;
 }
 
-const char *  PresidentialPardonForm::FormNotSigned::what() const throw() {
+const char *  PresidentialPardonForm::FormNotSigned::what() const throw() { /*throw this exption if not signed*/
     return ("This form is not signed");
 }

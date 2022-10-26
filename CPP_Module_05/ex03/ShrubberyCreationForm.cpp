@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ShrubberyCreationForm.cpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: yismaili < yismaili@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 19:09:51 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/20 20:58:59 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/26 16:26:18 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,32 +16,33 @@
 ShrubberyCreationForm::ShrubberyCreationForm()
 {
     this->target = "";
-    std::cout <<"Shrubbery Creation Form Default constructor called"<<std::endl;
+    std::cout <<"Default constructor of Shrubbery Creation Form called"<<std::endl;
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(std::string _target):Form(getTarget(), 0, 145, 137)
 {
     this->target = _target;
-    std::cout <<"Shrubbery Creation Form constructor called"<<std::endl;
+    std::cout <<"Constructor Shrubbery of Creation Form called"<<std::endl;
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &copy):Form(getTarget(), 0, 145, 137)
 {
     this->target = copy.getTarget();
-    std::cout <<"Shrubbery Creation Form constructor called"<<std::endl;
+    std::cout <<"Copy constructor of Shrubbery Creation Form called"<<std::endl;
 }
 
 ShrubberyCreationForm &ShrubberyCreationForm::operator=(const ShrubberyCreationForm &copyAssig){
     this->target = copyAssig.getTarget();
-    std::cout <<"Shrubbery Creation Form assignment operator called"<<std::endl;
+  //  std::cout <<"Shrubbery Creation Form assignment operator called"<<std::endl;
     return (*this);
 }
 
 ShrubberyCreationForm::~ShrubberyCreationForm()
 {
+    std::cout <<"Destructor of Shrubbery Creation Form called"<<std::endl;
 }
  
- std::string ShrubberyCreationForm:: getTarget() const{
+ const std::string &ShrubberyCreationForm:: getTarget() const{
     return (target);
  } 
  
@@ -50,35 +51,36 @@ ShrubberyCreationForm::~ShrubberyCreationForm()
  }
 
  void ShrubberyCreationForm:: execute(Bureaucrat const & executor) const{
-    std::ofstream	outPut;
+    std::ofstream	outPut; /*ofstream or fstream object used to open a file for writing*/
     
-    if (getGradeExecute() < executor.getGrade()){
-        throw(GradeTooLowException());
-    }
     if (!getSigned()){
         throw(FormNotSigned());
     }
-    outPut.open(target + "_shrubbery");
-	if (!outPut.is_open() || !outPut.good())
+    if (getGradeExecute() < executor.getGrade()){
+        throw(GradeTooLowException());
+    }
+    outPut.open(getTarget() + "_shrubbery");
+	if (!outPut.is_open() || !outPut.good()) /* check if the stream is good enough to work */
 		throw (FileError());
-	outPut << "             *** |**** *                   " << std::endl;
-	outPut << "    	      * ****|****  ***                " << std::endl;
-	outPut << "          *** --*|*** }-****               " << std::endl;
-	outPut << "         **--*- -||-**-_-**-_*             " << std::endl;
-	outPut << "       ***  --***|- -- * ***               " << std::endl;
-	outPut << "     **_-_*-_-** | *-***_-_****            " << std::endl;
-	outPut << "    ** **** * - *| -  **** **-**           " << std::endl;
-	outPut << "    ~__*_--***` }|{,***---***-~~           " << std::endl;
-	outPut << "                }|{                		  " << std::endl;
-	outPut << "                }|{                        " << std::endl;
-	outPut << "                }|{                        " << std::endl;
-	outPut << "                {|}                        " << std::endl;
-	outPut << "          ~~~~=~{|}~~~~                    " << std::endl;
-	outPut << "              [  }  ]                      " << std::endl;
-	outPut << "                 {                         " << std::endl;
-	outPut << "                                           " << std::endl;
+outPut<<"	           \"/ |    |/\n";
+outPut<<"        \"/ / \"||/  /_/___/_\n";
+outPut<<"         \"/   |/ \"/\n";
+outPut<<"    _\"__\"__\"  |  /_____/_\n";
+outPut<<"           \'  | /          /\n";
+outPut<<"  __ _-----`  |{,-----------~\n";
+outPut<<"           \' }{\n";
+outPut<<"             }{{\n";
+outPut<<"             }}{\n";
+outPut<<"             {{}\n";
+outPut<<"      , -=-~{ .-^- _\n";
+outPut<<"            `}\n";
+outPut<<"             {\n";
  }
+ 
  const char* ShrubberyCreationForm::FileError::what() const throw() {
-	return "Could not open file";
+	return "Error !!can't open this file for writing";
 }
 
+const char *  ShrubberyCreationForm::FormNotSigned::what() const throw() {
+    return ("This form is not signed");
+}
