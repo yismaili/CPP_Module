@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yismaili <yismaili@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: yismaili < yismaili@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 21:22:30 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/21 21:34:36 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/27 19:39:40 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ typedef struct s_data {
 } Data;
 
 uintptr_t serialize(Data* ptr) {
-	return reinterpret_cast<uintptr_t>(ptr);
+	return reinterpret_cast<uintptr_t>(ptr); /* unsigned integer type capable of holding a pointer to void */
 }
 
 Data* deserialize(uintptr_t raw) {

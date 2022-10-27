@@ -5,16 +5,16 @@
 #                                                     +:+ +:+         +:+      #
 #    By: yismaili < yismaili@student.1337.ma>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/10/21 18:40:58 by yismaili          #+#    #+#              #
-#    Updated: 2022/10/27 18:29:40 by yismaili         ###   ########.fr        #
+#    Created: 2022/10/27 20:14:34 by yismaili          #+#    #+#              #
+#    Updated: 2022/10/27 20:15:28 by yismaili         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = convert
+NAME = base
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
-SRCS =    main.cpp
-HDR = 
+SRCS =    main.cpp A.cpp B.cpp Base.cpp
+HDR =  A.hpp B.hpp Base.hpp
 OBJS = $(SRCS:.cpp=.o)
 
 BGreen=\033[1;32m
@@ -42,5 +42,3 @@ fclean: clean
 	@rm -rf $(NAME)
 
 re: fclean all
-
-.PHONY: all clean fclean re
