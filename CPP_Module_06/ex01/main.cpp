@@ -6,7 +6,7 @@
 /*   By: yismaili < yismaili@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 21:22:30 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/27 19:39:40 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/27 20:23:03 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,8 @@ int	main(void) {
 	Data*	tmp;
 
 	data->msg = "yismaili";
-	tmp = deserialize(serialize(data));
+	uintptr_t srlz = serialize(data);
+	tmp = deserialize(srlz);
 
 	if (data->msg != tmp->msg) {
         std::cout << " was not successful!!!!" << std::endl;   
@@ -37,6 +38,6 @@ int	main(void) {
 	else {
 		std::cout << "successful!!!!" << std::endl;
     }
-	delete data;
+	delete (data);
 	return (0);
 }
