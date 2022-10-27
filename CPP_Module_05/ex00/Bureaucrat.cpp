@@ -6,7 +6,7 @@
 /*   By: yismaili < yismaili@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 21:00:34 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/26 15:50:32 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/26 21:53:41 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ int Bureaucrat::getGrade() const {
     return (Name);
  }
  int Bureaucrat::incrementGrade() {
-    this->Grade++;
+    this->Grade--;
     if (this->Grade < 1) {
         throw(GradeTooHighException());
     }
@@ -69,7 +69,7 @@ int Bureaucrat::getGrade() const {
  }
  
  int Bureaucrat::decrementGrade() {
-    this->Grade--;
+    this->Grade++;
     if (this->Grade < 1) {
         throw(GradeTooHighException());
     }
