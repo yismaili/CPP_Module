@@ -6,7 +6,7 @@
 /*   By: yismaili < yismaili@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 20:17:07 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/28 17:24:03 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/28 20:18:23 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,10 @@ Base * generate(void) {
     int i  = 0;
     while (i < 3)
     {
-        if (i == randNumber)
+        if (i != randNumber)
         {
-           break;
+            delete (instance[i]);
         }
-        delete (instance[i]);
         i++;
     }
      return (instance[randNumber]);
@@ -36,55 +35,56 @@ void identify(Base* p) {
     A * a;
     a = dynamic_cast<A*>(p);
     if (a) {
-        std::cout<<"Class A has successfully!!"<<std::endl;
+        std::cout<<"Class A has successfull!!"<<std::endl;
     }
     B * b;
-     b = dynamic_cast<B*>(p);
+    b = dynamic_cast<B*>(p);
     if(b) {
-        std::cout<<"Class B has successfully!!"<<std::endl;
+        std::cout<<"Class B has successfull!!"<<std::endl;
     }
     C *c;
-     c = dynamic_cast<C*>(p);
+    c = dynamic_cast<C*>(p);
     if(c) {
-        std::cout<<"Class C has successfully!!"<<std::endl;
+        std::cout<<"Class C has successfull!!"<<std::endl;
     }
 }
 
 void identify(Base& p) {
-	Base	var;
-	std::cout << "The actual type of the object is \"";
-	try {
-		var = dynamic_cast<A&>(p);
-		std::cout << "A\"" << std::endl;
-	}
-	catch(std::exception &e) {
-		try {
-			var = dynamic_cast<B&>(p);
-			std::cout << "B\"" << std::endl;
-		}
-		catch(std::exception &e) {
-			try {
-				var = dynamic_cast<C&>(p);
-				std::cout << "C\"" << std::endl;
-			}
-			catch(std::exception &e) {
-				std::cout << "Unknown\"" << std::endl;
-			}
-		}
-	}
+    try
+    {
+        A a = dynamic_cast<A&>(p);
+		std::cout << "Class A : Dynamic Casts with References successfull!!" << std::endl;
+        return ;
+    }
+    catch(...)
+    {
+       try
+       {
+            B b = dynamic_cast<B&>(p);
+            std::cout << "Class B : Dynamic Casts with References has successfull!!" << std::endl;
+            return ;
+       }
+       catch(...)
+       {
+            try
+            {
+                C c = dynamic_cast<C&>(p);
+                std::cout << "Class C : Dynamic Casts with References has successfull!!" << std::endl; 
+                return ;
+            }
+            catch(const std::exception& e)
+            {
+                std::cout<<e.what();
+            } 
+       }  
+    }
 } 
 int main( void ) {
     
-    Base*	unvalidPtr = new Base;
-	Base*	validPtr = generate();
-	Base&	validRef = *validPtr;
-	Base&	unvalidRef = *unvalidPtr;
+  Base *base = generate();
 
-	identify(validPtr);
-	identify(validRef);
-	identify(unvalidPtr);
-	identify(unvalidRef);
-
-	delete unvalidPtr;
-	delete validPtr;
+	identify(base);
+    identify(*base);
+    delete (base);
+   // while (1);  
 }
