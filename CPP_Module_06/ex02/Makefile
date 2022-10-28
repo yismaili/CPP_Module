@@ -6,14 +6,14 @@
 #    By: yismaili < yismaili@student.1337.ma>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/27 20:14:34 by yismaili          #+#    #+#              #
-#    Updated: 2022/10/27 20:15:28 by yismaili         ###   ########.fr        #
+#    Updated: 2022/10/28 16:39:19 by yismaili         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = base
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
-SRCS =    main.cpp A.cpp B.cpp Base.cpp
+SRCS =    main.cpp Base.cpp
 HDR =  A.hpp B.hpp Base.hpp
 OBJS = $(SRCS:.cpp=.o)
 

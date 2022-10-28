@@ -6,7 +6,17 @@
 /*   By: yismaili < yismaili@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 20:15:42 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/27 20:15:43 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/28 16:37:28 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef A_HPP
+#define A_HPP
+
+#include "Base.hpp"
+
+class A : public Base
+{
+};
+
+#endif

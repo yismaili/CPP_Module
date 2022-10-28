@@ -6,7 +6,7 @@
 /*   By: yismaili < yismaili@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 21:13:13 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/27 19:35:30 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/28 15:57:50 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,9 @@ void  convertToInt(std::string input) {
 void  convertToFloat(std::string input) {
      try
     {
+        std::cout << std::fixed; /* write floating-point values in fixed-point notation */
+		std::cout.precision(1); /* How to set precision for all cout in the code block */
         float strToFloat = std::stof(input);
-        std::cout << std::fixed;
-		std::cout.precision(1);
         std::cout <<"float: "<< strToFloat <<"f"<<std::endl;
     }
     catch(...) {
