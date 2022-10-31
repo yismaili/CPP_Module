@@ -5,25 +5,23 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: yismaili < yismaili@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/28 22:41:26 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/31 14:03:17 by yismaili         ###   ########.fr       */
+/*   Created: 2022/10/31 11:24:24 by yismaili          #+#    #+#             */
+/*   Updated: 2022/10/31 12:48:34 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "whatever.hpp"
+ #include "iter.hpp"
 
-int main( void ) {
-int a = 2;
-int b = 3;
-::swap( a, b );
-std::cout << "a = " << a << ", b = " << b << std::endl;
-std::cout << "min( a, b ) = " << ::min( a, b ) << std::endl;
-std::cout << "max( a, b ) = " << ::max( a, b ) << std::endl;
-std::string c = "chaine1";
-std::string d = "chaine2";
-::swap(c, d);
-std::cout << "c = " << c << ", d = " << d << std::endl;
-std::cout << "min( c, d ) = " << ::min( c, d ) << std::endl;
-std::cout << "max( c, d ) = " << ::max( c, d ) << std::endl;
-return 0;
-}
+ int main( void ){
+    int			frstArray[] = {0, 1, 2, 3, 4, 5};
+	std::string		scndArray[] = {"1337", "hi", "yismail", ":)"};
+
+    std::cout<<"array of intigers :"<<std::endl;
+	iter(frstArray, 6, &displayElement);
+	std::cout << std::endl;
+    
+    std::cout<<"array of string :"<<std::endl;
+	iter(scndArray, 4, &displayElement);
+    std::cout << std::endl;
+    return (0);
+ }  
