@@ -6,7 +6,7 @@
 /*   By: yismaili < yismaili@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 21:13:13 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/28 21:54:29 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/30 11:28:43 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ void  convertToDouble(std::string input) {
 
 int main(int argc, char **argv) {
    if (argc == 2) {
-		convertToChar(argv[1]);
+    	convertToChar(argv[1]);
 		convertToInt(argv[1]);
 		convertToFloat(argv[1]);
 		convertToDouble(argv[1]);

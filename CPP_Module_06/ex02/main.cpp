@@ -6,7 +6,7 @@
 /*   By: yismaili < yismaili@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 20:17:07 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/28 20:18:23 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/30 12:01:06 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 Base * generate(void) {
     
     Base*	instance[3] = {new A, new B, new C};
-    srand(time(0));
+    srand(time(0));/* seed used to initialize random number generators */
     int randNumber = rand() % 3;
     int i  = 0;
     while (i < 3)
