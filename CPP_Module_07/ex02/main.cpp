@@ -6,7 +6,7 @@
 /*   By: yismaili < yismaili@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 13:36:46 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/31 14:12:57 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/31 19:06:20 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,11 @@ int main(int, char**)
     {
         numbers[i] = rand();
     }
+   std::cout<<"the number of elements in the array : " <<numbers.size()<<std::endl;
     delete [] mirror;//
+    // while (1)
+    // {
+    //     /* code */
+    // }
     return 0;
 }

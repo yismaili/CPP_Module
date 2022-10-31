@@ -6,7 +6,7 @@
 /*   By: yismaili < yismaili@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 13:36:43 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/31 15:04:39 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/10/31 19:06:56 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,9 @@ public:
         this->nArray = 0;
     }
     Array (int n) {
-            nArray = n;
-           // array = NULL;
-             array = new T[nArray];
-        if (!array)
-        {
+        nArray = n;
+        array = new T[nArray];
+        if (!array){
             exit(1);
         }
     }
@@ -42,13 +40,11 @@ public:
     Array &operator=(const Array & copyAssig) {
         nArray = copyAssig.nArray;
         array = new T[nArray];
-        if (!array)
-        {
+        if (!array){
             exit(1);
         }
         int i = 0;
-        while (i < nArray)
-        {
+        while (i < nArray){
             array[i] = copyAssig.array[i];
             i++;
         }
@@ -57,11 +53,19 @@ public:
     ~Array(){
         delete[] array;
     }
-    T &operator[](int i){
-        if(i < 0 || i >= nArray){
+    T &operator[](int index){
+        if(index < 0 || index >= nArray){
             throw (std::exception());
         }
-        return (array[i]);
+        return (array[index]);
+    }
+    T size(void) {
+        T  i =  0;
+        while (this ->array[i])
+        {
+            i++;
+        }
+        return (i);
     }
 };
 
