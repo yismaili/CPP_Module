@@ -6,7 +6,7 @@
 /*   By: yismaili < yismaili@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 13:36:46 by yismaili          #+#    #+#             */
-/*   Updated: 2022/10/31 22:19:13 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/11/01 11:00:10 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int main(int, char**)
         Array<int> tmp = numbers;
         Array<int> test(tmp);
     }
-
+ 
     for (int i = 0; i < MAX_VAL; i++)
     {
         if (mirror[i] != numbers[i])
