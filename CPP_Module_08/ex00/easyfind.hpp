@@ -6,7 +6,7 @@
 /*   By: yismaili < yismaili@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 22:03:28 by yismaili          #+#    #+#             */
-/*   Updated: 2022/11/02 13:29:33 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/11/02 16:15:17 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ void easyfind(T &cntner, int elment){
 
     itt = std::find(cntner.begin(), cntner.end(), elment);
     if (itt == cntner.end()){
+        std::cout << elment<<" ";
           throw(OccurrenceNotFound());
     }
     else{

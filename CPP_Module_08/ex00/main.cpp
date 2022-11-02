@@ -6,7 +6,7 @@
 /*   By: yismaili < yismaili@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 11:02:26 by yismaili          #+#    #+#             */
-/*   Updated: 2022/11/02 13:28:49 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/11/02 16:13:18 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,11 @@
 int main (void){
    	std::array<int,3>	arry = {0, 1, 2};
 	std::deque<int>		dque(arry.begin(), arry.end());
-	std::list<int>		lst(arry.begin(), arry.end());
+	std::list<int>		lst(arry.begin(), arry.end());/* NO random access */
 	std::vector<int>	vctor(arry.begin(), arry.end());
-
 	try {
         int i = 0;
-		while(i < 4 ){
+		while(i < 4){
 			easyfind(arry, i);
             i++;
             }
