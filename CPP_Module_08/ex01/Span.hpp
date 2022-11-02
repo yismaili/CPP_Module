@@ -6,7 +6,7 @@
 /*   By: yismaili < yismaili@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 16:28:33 by yismaili          #+#    #+#             */
-/*   Updated: 2022/11/02 20:53:25 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/11/02 21:29:01 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,6 @@ public:
 	};
     int shortestSpan();
     int longestSpan();
+    void addManyNumbers(std::list<int>::iterator itStart,std::list<int>::iterator itEnd);
 };
 #endif
