@@ -6,7 +6,7 @@
 /*   By: yismaili < yismaili@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 21:55:32 by yismaili          #+#    #+#             */
-/*   Updated: 2022/11/03 17:56:32 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/11/03 18:42:43 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ int main()
         ++it;
     }
     std::stack<int> s(mstack);
+    
     /*list  ----------------------->*/
     std::cout<<"list :"<<std::endl;
     std::list<int> mlist;
