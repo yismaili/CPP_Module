@@ -6,7 +6,7 @@
 /*   By: yismaili < yismaili@student.1337.ma>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 21:55:32 by yismaili          #+#    #+#             */
-/*   Updated: 2022/11/03 18:42:43 by yismaili         ###   ########.fr       */
+/*   Updated: 2022/11/03 20:42:42 by yismaili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int main()
 {
-    MutantStack<int> mstack;
+    MutantStack<int> mstack; /*stack is a container adaptor  "last-in, first-out"*/
     mstack.push(5);
     mstack.push(17);
     std::cout << mstack.top() << std::endl;
